@@ -5,7 +5,7 @@ import com.sjmt.SJMT.Entity.UserEntity;
 import com.sjmt.SJMT.Entity.UserRoleEnum;
 import com.sjmt.SJMT.Entity.UserStatusEnum;
 import com.sjmt.SJMT.Repository.UserRepository;
-import com.sjmt.SJMT.RequestEntity.LoginRequest;
+import com.sjmt.SJMT.DTO.RequestDTO.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,8 +27,8 @@ public class UserService {
             }
         }
         UserEntity newUser = new UserEntity();
-        newUser.setUsername("john_doe");
-        newUser.setEmail("john@example.com");
+        newUser.setUsername("aadhi");
+        newUser.setEmail("aadhi@example.com");
         newUser.setPassword("hashedPassword123");  // Should be hashed
         newUser.setRole(UserRoleEnum.STAFF);
         newUser.setStatus(UserStatusEnum.ACTIVE);

@@ -1,6 +1,5 @@
-package com.sjmt.SJMT.RequestEntity;
+package com.sjmt.SJMT.DTO.RequestDTO;
 
-import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotBlank;
 
 

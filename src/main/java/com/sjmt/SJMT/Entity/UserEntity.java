@@ -21,7 +21,7 @@ public class UserEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
     @SequenceGenerator(name = "user_seq", sequenceName = "user_sequence", allocationSize = 1)
-    @Column(name = "user_id")
+    @Column(name = "userid")
     private int userId;
 
     @NotBlank(message = "Username is required")
@@ -55,6 +55,12 @@ public class UserEntity{
     @Column(name = "status", nullable = false, length = 20)
     @Builder.Default
     private UserStatusEnum status = UserStatusEnum.ACTIVE;
+
+    @NotNull(message = "User privileges is required")
+    @Enumerated(EnumType.STRING)
+    @Column(name = "privileges", nullable = false, length = 10)
+    @Builder.Default
+    private PrivilegesEnum privileges = PrivilegesEnum.READ;
 
     public String getUsername() {
         return username;
@@ -112,7 +118,15 @@ public class UserEntity{
         this.status = status;
     }
 
-    public UserEntity(String username, String email, String password, LocalDateTime createdAt, LocalDateTime lastLogin, UserRoleEnum role, UserStatusEnum status) {
+    public PrivilegesEnum getPrivileges() {
+        return privileges;
+    }
+
+    public void setPrivileges(PrivilegesEnum privileges) {
+        this.privileges = privileges;
+    }
+
+    public UserEntity(String username, String email, String password, LocalDateTime createdAt, LocalDateTime lastLogin, UserRoleEnum role, UserStatusEnum status, PrivilegesEnum privileges) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -120,6 +134,7 @@ public class UserEntity{
         this.lastLogin = lastLogin;
         this.role = role;
         this.status = status;
+        this.privileges = privileges;
     }
 
     public UserEntity() {
