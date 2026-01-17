@@ -2,33 +2,42 @@ package com.sjmt.SJMT.DTO.RequestDTO;
 
 import jakarta.validation.constraints.NotBlank;
 
-
+/**
+ * Login Request DTO
+ * @author SJMT Team
+ * @version 1.0
+ */
 public class LoginRequest {
-
-    @NotBlank(message = "username/Email required")
-    private String usernameEmail;
-
-    @NotBlank(message = "password required")
+    
+    @NotBlank(message = "Username or email is required")
+    private String username;
+    
+    @NotBlank(message = "Password is required")
     private String password;
-
-    public String getUsernameEmail() {
-        return usernameEmail;
+    
+    // Constructors
+    public LoginRequest() {
     }
-
-    public void setUsernameEmail(String usernameEmail) {
-        this.usernameEmail = usernameEmail;
+    
+    public LoginRequest(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
-
+    
+    // Getters and Setters
+    public String getUsername() {
+        return username;
+    }
+    
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    
     public String getPassword() {
         return password;
     }
-
+    
     public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public LoginRequest(String usernameEmail, String password) {
-        this.usernameEmail = usernameEmail;
         this.password = password;
     }
 }

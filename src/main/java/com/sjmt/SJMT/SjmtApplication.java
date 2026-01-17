@@ -1,10 +1,11 @@
 package com.sjmt.SJMT;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.TimeZone;
 
-@SpringBootApplication
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication(scanBasePackages = "com.sjmt.SJMT")
 public class SjmtApplication {
 
 	public static void main(String[] args) {
@@ -12,5 +13,6 @@ public class SjmtApplication {
 		TimeZone.setDefault(TimeZone.getTimeZone("Asia/Kolkata"));
 
 		SpringApplication.run(SjmtApplication.class, args);
+
 	}
 }
