@@ -14,7 +14,7 @@
     <name>SJMT</name>
     <description>SJMT Backend with JWT Authentication</description>
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <!-- Spring Boot Starters -->

@@ -62,17 +62,17 @@ public class AuthenticationService {
     public AuthResponse login(LoginRequest request) {
         logger.info("Login attempt for: {}", request.getUsername());
         
-        // Authenticate user
-//        Authentication authentication = authenticationManager.authenticate(
-//            new UsernamePasswordAuthenticationToken(
-//                request.getUsername(),
-//                request.getPassword()
-//            )
-//        );
-//
-//        SecurityContextHolder.getContext().setAuthentication(authentication);
-//
-//        // Load user details
+//         Authenticate user
+        Authentication authentication = authenticationManager.authenticate(
+            new UsernamePasswordAuthenticationToken(
+                request.getUsername(),
+                request.getPassword()
+            )
+        );
+
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        // Load user details
         UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
 //
 //        // Get user entity
