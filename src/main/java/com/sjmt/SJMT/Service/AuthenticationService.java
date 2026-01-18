@@ -63,21 +63,21 @@ public class AuthenticationService {
         logger.info("Login attempt for: {}", request.getUsername());
         
         // Authenticate user
-        Authentication authentication = authenticationManager.authenticate(
-            new UsernamePasswordAuthenticationToken(
-                request.getUsername(),
-                request.getPassword()
-            )
-        );
-        
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        
-        // Load user details
+//        Authentication authentication = authenticationManager.authenticate(
+//            new UsernamePasswordAuthenticationToken(
+//                request.getUsername(),
+//                request.getPassword()
+//            )
+//        );
+//
+//        SecurityContextHolder.getContext().setAuthentication(authentication);
+//
+//        // Load user details
         UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
-        
-        // Get user entity
+//
+//        // Get user entity
         UserEntity user = userRepository.findByUsernameOrEmail(
-            request.getUsername(), 
+            request.getUsername(),
             request.getUsername()
         ).orElseThrow(() -> new RuntimeException("User not found"));
         

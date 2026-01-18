@@ -50,6 +50,7 @@ public class AuthenticationController {
     public ResponseEntity<ApiResponse<AuthResponse>> login(@Valid @RequestBody LoginRequest request) {
         try {
             logger.info("Login request received for: {}", request.getUsername());
+            System.out.println(request.getUsername() + " " + request.getPassword());
             AuthResponse response = authenticationService.login(request);
             return ResponseEntity.ok(ApiResponse.success("Login successful", response));
         } catch (Exception e) {

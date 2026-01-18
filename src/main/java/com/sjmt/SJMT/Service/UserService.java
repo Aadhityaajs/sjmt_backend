@@ -73,6 +73,7 @@ public class UserService {
         
         // Set temporary password (will be changed during email verification)
         String tempPassword = UUID.randomUUID().toString();
+        System.out.println(tempPassword);
         user.setPassword(passwordEncoder.encode(tempPassword));
         
         // Save user

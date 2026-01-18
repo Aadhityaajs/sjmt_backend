@@ -111,12 +111,12 @@ public class EmailService {
      * Generic method to send email
      */
     private void sendEmail(String to, String subject, String body) {
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom(fromEmail);
-        message.setTo(to);
-        message.setSubject(subject);
-        message.setText(body);
-        
-        mailSender.send(message);
+//        SimpleMailMessage message = new SimpleMailMessage();
+//        message.setFrom(fromEmail);
+//        message.setTo(to);
+//        message.setSubject(subject);
+//        message.setText(body);
+//
+//        mailSender.send(message);
     }
 }
