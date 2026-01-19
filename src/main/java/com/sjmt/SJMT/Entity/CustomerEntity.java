@@ -33,7 +33,7 @@ public class CustomerEntity {
     @Column(name = "customer_email", nullable = false, unique = true, length = 100)
     private String customerEmail;
 
-    @Column(name = "phone_number", length = 20)
+    @Column(name = "phone_number", length = 10)
     private String phoneNumber;
 
     @Column(name = "gst_number", nullable = true, updatable = true)

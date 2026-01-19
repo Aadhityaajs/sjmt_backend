@@ -1,18 +1,19 @@
 package com.sjmt.SJMT.Service;
 
-import com.sjmt.SJMT.DTO.RequestDTO.SupplierRequest;
-import com.sjmt.SJMT.DTO.ResponseDTO.SupplierResponse;
-import com.sjmt.SJMT.Entity.SupplierEntity;
-import com.sjmt.SJMT.Entity.SupplierStatusEnum;
-import com.sjmt.SJMT.Repository.SupplierRepository;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.stream.Collectors;
+import com.sjmt.SJMT.DTO.RequestDTO.SupplierRequest;
+import com.sjmt.SJMT.DTO.ResponseDTO.SupplierResponse;
+import com.sjmt.SJMT.Entity.SupplierEntity;
+import com.sjmt.SJMT.Entity.SupplierStatusEnum;
+import com.sjmt.SJMT.Repository.SupplierRepository;
 
 /**
  * Supplier Service
@@ -108,6 +109,29 @@ public class SupplierService {
         supplierRepository.save(supplier);
         
         logger.info("Supplier ID: {} has been blacklisted successfully", id);
+    }
+
+    /**
+     * Toggle Supplier Status between WHITELISTED and BLACKLISTED
+     */
+    @Transactional
+    public SupplierResponse toggleSupplierStatus(Integer id) {
+        logger.info("Toggling status for supplier ID: {}", id);
+        
+        SupplierEntity supplier = supplierRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Supplier not found with ID: " + id));
+
+        // Toggle logic
+        if (supplier.getStatus() == SupplierStatusEnum.WHITELISTED) {
+            supplier.setStatus(SupplierStatusEnum.BLACKLISTED);
+        } else {
+            supplier.setStatus(SupplierStatusEnum.WHITELISTED);
+        }
+
+        SupplierEntity updatedSupplier = supplierRepository.save(supplier);
+        logger.info("Supplier ID: {} status changed to: {}", id, updatedSupplier.getStatus());
+        
+        return convertToResponse(updatedSupplier);
     }
 
     /**

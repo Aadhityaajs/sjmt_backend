@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -66,5 +67,13 @@ public class CustomerController {
     public ResponseEntity<ApiResponse<Void>> delete(@PathVariable Integer id) {
         customerService.softDeleteCustomer(id);
         return ResponseEntity.ok(ApiResponse.success("Customer blacklisted (soft-deleted)"));
+    }
+
+    @PatchMapping("/{id}/toggle-status")
+    @Operation(summary = "Toggle customer status", description = "Switch between WHITELISTED and BLACKLISTED")
+    @PreAuthorize("hasAuthority('PRIVILEGE_UPDATE')")
+    public ResponseEntity<ApiResponse<CustomerResponse>> toggleStatus(@PathVariable Integer id) {
+        CustomerResponse response = customerService.toggleCustomerStatus(id);
+        return ResponseEntity.ok(ApiResponse.success("Customer status toggled successfully", response));
     }
 }

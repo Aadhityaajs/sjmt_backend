@@ -28,7 +28,7 @@ public class CreateUserRequest {
     @Size(min = 2, max = 100, message = "Full name must be between 2 and 100 characters")
     private String fullName;
     
-    @Pattern(regexp = "^[0-9]{10,20}$", message = "Phone number must be valid (10-20 digits)")
+    @Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be valid (10)")
     private String phoneNumber;
     
     @NotNull(message = "Role is required")

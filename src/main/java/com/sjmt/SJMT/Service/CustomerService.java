@@ -65,6 +65,29 @@ public class CustomerService {
         logger.info("Customer with ID {} has been blacklisted", id);
     }
 
+    /**
+     * Toggle Customer Status between WHITELISTED and BLACKLISTED
+     */
+    @Transactional
+    public CustomerResponse toggleCustomerStatus(Integer id) {
+        logger.info("Toggling status for customer ID: {}", id);
+        
+        CustomerEntity customer = customerRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Customer not found with ID: " + id));
+
+        // Toggle logic
+        if (customer.getStatus() == CustomerStatusEnum.WHITELISTED) {
+            customer.setStatus(CustomerStatusEnum.BLACKLISTED);
+        } else {
+            customer.setStatus(CustomerStatusEnum.WHITELISTED);
+        }
+
+        CustomerEntity updatedCustomer = customerRepository.save(customer);
+        logger.info("Customer ID: {} status changed to: {}", id, updatedCustomer.getStatus());
+        
+        return convertToResponse(updatedCustomer);
+    }
+
     private void updateEntityFromRequest(CustomerEntity entity, CustomerRequest request) {
         entity.setCustomerName(request.getCustomerName());
         entity.setCustomerEmail(request.getCustomerEmail());

@@ -1,11 +1,19 @@
 package com.sjmt.SJMT.Entity;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import java.time.LocalDateTime;
+
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.time.LocalDateTime;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 
 @Entity
@@ -25,7 +33,7 @@ public class SupplierEntity {
     @Column(name = "supplier_email", nullable = false, unique = true, length = 100)
     private String supplierEmail;
 
-    @Column(name = "phone_number", length = 20)
+    @Column(name = "phone_number", length = 10)
     private String phoneNumber;
 
     @Column(name = "gst_number", nullable = true, updatable = true)

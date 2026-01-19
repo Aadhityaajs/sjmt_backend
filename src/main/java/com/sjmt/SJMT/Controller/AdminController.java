@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sjmt.SJMT.DTO.ResponseDTO.ApiResponse;
 import com.sjmt.SJMT.DTO.RequestDTO.CreateUserRequest;
+import com.sjmt.SJMT.DTO.ResponseDTO.ApiResponse;
 import com.sjmt.SJMT.DTO.ResponseDTO.UserResponse;
 import com.sjmt.SJMT.Entity.PrivilegesEnum;
 import com.sjmt.SJMT.Entity.UserRoleEnum;
@@ -103,7 +103,6 @@ public class AdminController {
      * Update user role and privileges
      */
     @PutMapping("/users/{id}/role-privileges")
-
     @Operation(summary = "Update user role and privileges", description = "Update user role and privileges (Admin only)")
     public ResponseEntity<ApiResponse<UserResponse>> updateUserRoleAndPrivileges(
             @PathVariable Integer id,

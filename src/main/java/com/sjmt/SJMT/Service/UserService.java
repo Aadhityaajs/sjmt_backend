@@ -59,20 +59,31 @@ public class UserService {
             throw new RuntimeException("Email already exists");
         }
         
+        // CRITICAL: ADMIN role must ALWAYS have UPDATE privilege
+        UserRoleEnum role = request.getRole();
+        PrivilegesEnum privileges = request.getPrivileges();
+        
+        if (role == UserRoleEnum.ADMIN) {
+            if (privileges != PrivilegesEnum.UPDATE) {
+                throw new RuntimeException("ADMIN role must have UPDATE privilege. Cannot create ADMIN with other privileges.");
+            }
+            privileges = PrivilegesEnum.UPDATE; // Force UPDATE for ADMIN
+            logger.info("ADMIN role detected - enforcing UPDATE privilege");
+        }
+        
         // Create user entity with temporary password
         UserEntity user = new UserEntity();
         user.setUsername(request.getUsername());
         user.setEmail(request.getEmail());
         user.setFullName(request.getFullName());
         user.setPhoneNumber(request.getPhoneNumber());
-        user.setRole(request.getRole());
-        user.setPrivileges(request.getPrivileges());
+        user.setRole(role);
+        user.setPrivileges(privileges);
         user.setStatus(UserStatusEnum.ACTIVE);
         user.setEmailVerified(false);
         
         // Set temporary password (will be changed during email verification)
         String tempPassword = UUID.randomUUID().toString();
-        System.out.println(tempPassword);
         user.setPassword(passwordEncoder.encode(tempPassword));
         
         // Save user
@@ -159,6 +170,18 @@ public class UserService {
         UserEntity user = userRepository.findById(userId)
             .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
         
+        // CRITICAL: ADMIN role must ALWAYS have UPDATE privilege
+        if (role == UserRoleEnum.ADMIN && privileges != PrivilegesEnum.UPDATE) {
+            throw new RuntimeException("ADMIN role must have UPDATE privilege. Cannot change ADMIN privileges.");
+        }
+        
+        // If changing existing ADMIN to STAFF, allow it
+        // If setting role to ADMIN, force UPDATE privilege
+        if (role == UserRoleEnum.ADMIN) {
+            privileges = PrivilegesEnum.UPDATE;
+            logger.info("ADMIN role detected - enforcing UPDATE privilege");
+        }
+        
         user.setRole(role);
         user.setPrivileges(privileges);
         
@@ -192,23 +215,22 @@ public class UserService {
     }
     
     /**
-     * Block user (Admin only)
+     * Delete user (Admin only)
      */
     @Transactional
     public void deleteUser(Integer userId) {
-        logger.info("Blocking user with ID: {}", userId);
-
+        logger.info("Deleting user with ID: {}", userId);
+        
         UserEntity user = userRepository.findById(userId)
             .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
-
+        
         // Delete all user tokens
         tokenService.deleteUserTokens(user);
-
-        // Soft delete: set status to BLOCKED
-        user.setStatus(UserStatusEnum.BLOCKED);
-        userRepository.save(user);
-
-        logger.info("User blocked successfully: {}", user.getUsername());
+        
+        // Delete user
+        userRepository.delete(user);
+        
+        logger.info("User deleted successfully: {}", user.getUsername());
     }
     
     /**
