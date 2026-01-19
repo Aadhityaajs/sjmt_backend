@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sjmt.SJMT.DTO.RequestDTO.CreateUserRequest;
-import com.sjmt.SJMT.DTO.ResponseDTO.ApiResponse;
 import com.sjmt.SJMT.DTO.ResponseDTO.UserResponse;
 import com.sjmt.SJMT.Entity.EmailVerificationTokenEntity;
 import com.sjmt.SJMT.Entity.PrivilegesEnum;
@@ -193,22 +192,23 @@ public class UserService {
     }
     
     /**
-     * Delete user (Admin only)
+     * Block user (Admin only)
      */
     @Transactional
     public void deleteUser(Integer userId) {
-        logger.info("Deleting user with ID: {}", userId);
-        
+        logger.info("Blocking user with ID: {}", userId);
+
         UserEntity user = userRepository.findById(userId)
             .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
-        
+
         // Delete all user tokens
         tokenService.deleteUserTokens(user);
-        
-        // Delete user
-        userRepository.delete(user);
-        
-        logger.info("User deleted successfully: {}", user.getUsername());
+
+        // Soft delete: set status to BLOCKED
+        user.setStatus(UserStatusEnum.BLOCKED);
+        userRepository.save(user);
+
+        logger.info("User blocked successfully: {}", user.getUsername());
     }
     
     /**
