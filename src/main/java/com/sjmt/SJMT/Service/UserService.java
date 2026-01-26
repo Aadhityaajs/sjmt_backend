@@ -219,8 +219,7 @@ public class UserService {
      */
     @Transactional
     public void deleteUser(Integer userId) {
-        logger.info("Deleting user with ID: {}", userId);
-        
+        logger.info("Deleting user with ID: {}", userId);        
         UserEntity user = userRepository.findById(userId)
             .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
         
@@ -228,9 +227,9 @@ public class UserService {
         tokenService.deleteUserTokens(user);
         
         // Delete user
-        userRepository.delete(user);
+        user.setStatus(UserStatusEnum.BLOCKED); // Requirement: Delete is soft delete
         
-        logger.info("User deleted successfully: {}", user.getUsername());
+        logger.info("User deleted successfully: {}", user.getUsername());        
     }
     
     /**

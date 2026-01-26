@@ -25,8 +25,8 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
             .servers(List.of(
-                new Server().url("http://localhost:3000").description("Local Development Server"),
-                new Server().url("http://72.62.75.169:3000").description("VPS Server")
+                new Server().url("http://localhost:3010").description("Local Development Server"),
+                new Server().url("http://72.62.75.169:3010").description("VPS Server")
             ))
             .info(new Info()
                 .title("SJMT Backend API")

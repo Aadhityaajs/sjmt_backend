@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.sjmt.SJMT.DTO.ResponseDTO.ApiResponse;
+
 import com.sjmt.SJMT.Entity.EmailVerificationTokenEntity;
 import com.sjmt.SJMT.Entity.PasswordResetTokenEntity;
 import com.sjmt.SJMT.Entity.RefreshTokenEntity;
@@ -89,12 +89,13 @@ public class TokenService {
     }
     
     /**
-     * Delete user's refresh tokens
+     * Delete user's tokens
      */
     @Transactional
     public void deleteUserTokens(UserEntity user) {
         refreshTokenRepository.deleteByUser(user);
-        logger.info("Deleted all refresh tokens for user: {}", user.getUsername());
+        emailVerificationTokenRepository.deleteByUser(user);
+        logger.info("Deleted all security tokens for user: {}", user.getUsername());
     }
     
     /**
