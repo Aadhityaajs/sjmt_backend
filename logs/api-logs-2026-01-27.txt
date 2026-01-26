@@ -1,0 +1,14 @@
+2026-01-27 00:25:21 | ANONYMOUS | /api/auth/login | 401
+2026-01-27 00:26:53 | ANONYMOUS | /api/auth/login | 401
+2026-01-27 00:32:41 | aadhi1 | /api/auth/login | 200
+2026-01-27 00:37:56 | aadhi1 | /api/auth/login | 200
+2026-01-27 00:42:36 | aadhi1 | /api/auth/login | 200
+2026-01-27 00:43:25 | aadhi1 | /api/users/profile | 200
+2026-01-27 00:44:37 | aadhi1 | /api/admin/users | 200
+2026-01-27 00:45:26 | aadhi1 | /api/auth/login | 200
+2026-01-27 00:46:10 | aadhi1 | /api/admin/users | 200
+2026-01-27 00:47:15 | aadhi1 | /api/admin/users/1 | 404
+2026-01-27 00:47:40 | aadhi1 | /api/admin/users/5 | 200
+2026-01-27 00:54:04 | aadhi1 | /api/customers/1 | 200
+2026-01-27 00:58:27 | aadhi1 | /api/customers/1 | 200
+2026-01-27 01:03:32 | aadhi1 | /api/auth/login | 200
