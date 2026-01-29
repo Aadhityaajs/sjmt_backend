@@ -105,7 +105,7 @@ public class SupplierService {
         SupplierEntity supplier = supplierRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Supplier not found with ID: " + id));
 
-        supplier.setStatus(SupplierStatusEnum.BLACKLISTED);
+        supplier.setStatus(SupplierStatusEnum.DELETED);
         supplierRepository.save(supplier);
         
         logger.info("Supplier ID: {} has been blacklisted successfully", id);

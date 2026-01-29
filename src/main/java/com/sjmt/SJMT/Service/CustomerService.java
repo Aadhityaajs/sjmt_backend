@@ -60,7 +60,7 @@ public class CustomerService {
         CustomerEntity customer = customerRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Customer not found"));
         
-        customer.setStatus(CustomerStatusEnum.BLACKLISTED); // Requirement: Delete is soft delete
+        customer.setStatus(CustomerStatusEnum.DELETED); // Requirement: Delete is soft delete
         customerRepository.save(customer);
         logger.info("Customer with ID {} has been blacklisted", id);
     }

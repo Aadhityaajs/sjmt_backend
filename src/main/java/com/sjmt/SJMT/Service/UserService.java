@@ -227,7 +227,7 @@ public class UserService {
         tokenService.deleteUserTokens(user);
         
         // Delete user
-        user.setStatus(UserStatusEnum.BLOCKED); // Requirement: Delete is soft delete
+        user.setStatus(UserStatusEnum.DELETED); // Requirement: Delete is soft delete
         
         logger.info("User deleted successfully: {}", user.getUsername());        
     }
