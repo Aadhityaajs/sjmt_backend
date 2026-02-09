@@ -1,0 +1,295 @@
+1. Email Verification Token Storage
+I see you have EmailVerificationTokenEntity.java as a separate entity. Do you want to:
+Option A: Keep using the separate EmailVerificationTokenEntity table (your current approach)
+Option B: Store the token directly in UserEntity (simpler, what I proposed)
+Option A
+2. UserEntity Fields
+Looking at your existing code, does your UserEntity.java currently have: check code
+emailVerified field? (I see this in your structure)
+Any existing password-related flags?
+3. Repository Pattern
+I see you have separate repositories. Do you want me to:
+Update EmailVerificationTokenRepository if using separate entity?
+Or just update UserRepository if storing token in UserEntity?
+Update EmailVerificationTokenRepository
+4. AuthenticationService Method Names
+What's your current authentication service method structure? I see AuthenticationService.java - does it have:
+login() method?
+verifyEmail() method?
+changePassword() method?
+5. DTO Structure
+I see you have RequestDTO and ResponseDTO folders. Do you already have:
+AuthResponse.java? (I need to add requirePasswordChange field)
+package com.sjmt.SJMT.DTO.ResponseDTO;
+import com.sjmt.SJMT.Entity.PrivilegesEnum;
+import com.sjmt.SJMT.Entity.UserRoleEnum;
+/**
+ * Authentication Response DTO
+ * @author SJMT Team
+ * @version 1.0
+ */
+public class AuthResponse {
+    
+    private String accessToken;
+    private String refreshToken;
+    private String tokenType = "Bearer";
+    private Integer userId;
+    private String username;
+    private String email;
+    private String fullName;
+    private UserRoleEnum role;
+    private PrivilegesEnum privileges;
+    private Long expiresIn;
+    
+    // Constructors
+    public AuthResponse() {
+    }
+    
+    public AuthResponse(String accessToken, String refreshToken, Integer userId, 
+                       String username, String email, String fullName,
+                       UserRoleEnum role, PrivilegesEnum privileges, Long expiresIn) {
+        this.accessToken = accessToken;
+        this.refreshToken = refreshToken;
+        this.userId = userId;
+        this.username = username;
+        this.email = email;
+        this.fullName = fullName;
+        this.role = role;
+        this.privileges = privileges;
+        this.expiresIn = expiresIn;
+    }
+    
+    // Getters and Setters
+    public String getAccessToken() {
+        return accessToken;
+    }
+    
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+    }
+    
+    public String getRefreshToken() {
+        return refreshToken;
+    }
+    
+    public void setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+    }
+    
+    public String getTokenType() {
+        return tokenType;
+    }
+    
+    public void setTokenType(String tokenType) {
+        this.tokenType = tokenType;
+    }
+    
+    public Integer getUserId() {
+        return userId;
+    }
+    
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+    
+    public String getUsername() {
+        return username;
+    }
+    
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public String getFullName() {
+        return fullName;
+    }
+    
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+    
+    public UserRoleEnum getRole() {
+        return role;
+    }
+    
+    public void setRole(UserRoleEnum role) {
+        this.role = role;
+    }
+    
+    public PrivilegesEnum getPrivileges() {
+        return privileges;
+    }
+    
+    public void setPrivileges(PrivilegesEnum privileges) {
+        this.privileges = privileges;
+    }
+    
+    public Long getExpiresIn() {
+        return expiresIn;
+    }
+    
+    public void setExpiresIn(Long expiresIn) {
+        this.expiresIn = expiresIn;
+    }
+}
+ChangePasswordRequest.java?
+package com.sjmt.SJMT.DTO.RequestDTO;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
+/**
+ * Change Password Request DTO
+ */
+public class ChangePasswordRequest {
+    
+    @NotBlank(message = "Current password is required")
+    private String currentPassword;
+    
+    @NotBlank(message = "New password is required")
+    @Size(min = 8, message = "Password must be at least 8 characters")
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]+$",
+             message = "Password must contain at least one uppercase, one lowercase, one number and one special character")
+    private String newPassword;
+    
+    public ChangePasswordRequest() {
+    }
+    
+    public ChangePasswordRequest(String currentPassword, String newPassword) {
+        this.currentPassword = currentPassword;
+        this.newPassword = newPassword;
+    }
+    
+    public String getCurrentPassword() {
+        return currentPassword;
+    }
+    
+    public void setCurrentPassword(String currentPassword) {
+        this.currentPassword = currentPassword;
+    }
+    
+    public String getNewPassword() {
+        return newPassword;
+    }
+    
+    public void setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+    }
+}
+6. Admin Creation Flow
+For admin creating staff accounts, do you want:
+A new endpoint in AdminController.java?
+Or add to UserController.java?
+What DTO should I create for the request? (I suggested CreateStaffRequest)
+package com.sjmt.SJMT.DTO.RequestDTO;
+
+import com.sjmt.SJMT.Entity.PrivilegesEnum;
+import com.sjmt.SJMT.Entity.UserRoleEnum;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
+/**
+ * Create User Request DTO (Used by Admin)
+ * @author SJMT Team
+ * @version 1.0
+ */
+public class CreateUserRequest {
+    
+    @NotBlank(message = "Username is required")
+    @Size(min = 3, max = 50, message = "Username must be between 3 and 50 characters")
+    private String username;
+    
+    @NotBlank(message = "Email is required")
+    @Email(message = "Email must be valid")
+    private String email;
+    
+    @NotBlank(message = "Full name is required")
+    @Size(min = 2, max = 100, message = "Full name must be between 2 and 100 characters")
+    private String fullName;
+    
+    @Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be valid (10)")
+    private String phoneNumber;
+    
+    @NotNull(message = "Role is required")
+    private UserRoleEnum role = UserRoleEnum.STAFF;
+    
+    @NotNull(message = "Privileges are required")
+    private PrivilegesEnum privileges = PrivilegesEnum.READ;
+    
+    // Constructors
+    public CreateUserRequest() {
+    }
+    
+    public CreateUserRequest(String username, String email, String fullName, 
+                           String phoneNumber, UserRoleEnum role, PrivilegesEnum privileges) {
+        this.username = username;
+        this.email = email;
+        this.fullName = fullName;
+        this.phoneNumber = phoneNumber;
+    }
+    
+    // Getters and Setters
+    public String getUsername() {
+        return username;
+    }
+    
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public String getFullName() {
+        return fullName;
+    }
+    
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+    
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
+    public UserRoleEnum getRole() {
+        return role;
+    }
+    
+    public void setRole(UserRoleEnum role) {
+        this.role = role;
+    }
+    
+    public PrivilegesEnum getPrivileges() {
+        return privileges;
+    }
+    
+    public void setPrivileges(PrivilegesEnum privileges) {
+        this.privileges = privileges;
+    }
+}
+7. Email Configuration
+Your EmailService.java exists. Should I:
+Add new methods to existing EmailService? yes
+Or create completely new email templates?
