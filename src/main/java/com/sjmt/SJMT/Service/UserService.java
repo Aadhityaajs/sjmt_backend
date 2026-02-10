@@ -1,7 +1,6 @@
 package com.sjmt.SJMT.Service;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -83,8 +82,8 @@ public class UserService {
         user.setEmailVerified(false);
         
         // Set temporary password (will be changed during email verification)
-        String tempPassword = UUID.randomUUID().toString();
-        user.setPassword(passwordEncoder.encode(tempPassword));
+        // String tempPassword = UUID.randomUUID().toString();
+        // user.setPassword(passwordEncoder.encode(tempPassword));
         
         // Save user
         UserEntity savedUser = userRepository.save(user);
