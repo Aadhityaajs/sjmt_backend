@@ -14,8 +14,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sjmt.SJMT.DTO.ResponseDTO.AuthResponse;
 import com.sjmt.SJMT.DTO.RequestDTO.LoginRequest;
+import com.sjmt.SJMT.DTO.ResponseDTO.AuthResponse;
 import com.sjmt.SJMT.Entity.EmailVerificationTokenEntity;
 import com.sjmt.SJMT.Entity.PasswordResetTokenEntity;
 import com.sjmt.SJMT.Entity.RefreshTokenEntity;
@@ -104,7 +104,8 @@ public class AuthenticationService {
             user.getFullName(),
             user.getRole(),
             user.getPrivileges(),
-            jwtUtil.getAccessTokenExpiration()
+            jwtUtil.getAccessTokenExpiration(),
+            user.isTemporaryPassword()
         );
     }
     
@@ -137,7 +138,8 @@ public class AuthenticationService {
             user.getFullName(),
             user.getRole(),
             user.getPrivileges(),
-            jwtUtil.getAccessTokenExpiration()
+            jwtUtil.getAccessTokenExpiration(),
+            user.isTemporaryPassword()
         );
     }
     
@@ -171,14 +173,30 @@ public class AuthenticationService {
         
         // Mark email as verified
         user.setEmailVerified(true);
+        
+        // Generate temporary password (8 characters alphanumeric)
+        String tempPassword = generateTemporaryPassword();
+        
+        // Store hashed password for login
+        user.setPassword(passwordEncoder.encode(tempPassword));
+        
+        // Store plain password to send via email
+        user.setTempPasswordPlain(tempPassword);
+        
+        // Mark as temporary password
+        user.setTemporaryPassword(true);
+        
         userRepository.save(user);
         
         // Mark token as used
         tokenService.markEmailVerificationTokenAsUsed(verificationToken);
         
-        logger.info("Email verified successfully for user: {}", user.getUsername());
+        // Send temporary password email
+        emailService.sendTemporaryPasswordEmail(user.getEmail(), tempPassword, user.getUsername());
+        
+        logger.info("Email verified and temporary password sent for user: {}", user.getUsername());
     }
-    
+
     /**
      * Request password reset
      */
@@ -239,11 +257,31 @@ public class AuthenticationService {
         
         // Update password
         user.setPassword(passwordEncoder.encode(newPassword));
+        
+        // Clear temporary password fields
+        user.setTemporaryPassword(false);
+        user.setTempPasswordPlain(null);
+        
         userRepository.save(user);
         
         // Revoke all existing sessions
         tokenService.revokeAllUserTokens(user);
         
         logger.info("Password changed successfully for user: {}", username);
+    }
+
+    /**
+     * Generate random temporary password
+     */
+    private String generateTemporaryPassword() {
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        StringBuilder password = new StringBuilder();
+        java.security.SecureRandom random = new java.security.SecureRandom();
+        
+        for (int i = 0; i < 8; i++) {
+            password.append(chars.charAt(random.nextInt(chars.length())));
+        }
+        
+        return password.toString();
     }
 }

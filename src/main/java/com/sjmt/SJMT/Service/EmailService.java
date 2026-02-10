@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-import com.sjmt.SJMT.DTO.ResponseDTO.ApiResponse;
 
 
 /**
@@ -106,17 +105,42 @@ public class EmailService {
             throw new RuntimeException("Failed to send set password email");
         }
     }
+
+    /**
+     * Send temporary password email after email verification
+     */
+    public void sendTemporaryPasswordEmail(String toEmail, String tempPassword, String username) {
+        try {
+            String subject = "Your Temporary Password - " + appName;
+            
+            String body = "Hello " + username + ",\n\n" +
+                    "Your email has been verified successfully!\n\n" +
+                    "Here is your temporary password to login:\n\n" +
+                    "Username: " + username + "\n" +
+                    "Temporary Password: " + tempPassword + "\n\n" +
+                    "IMPORTANT: For security reasons, you will be required to change this password on your first login.\n\n" +
+                    "Please login at: " + baseUrl + "\n\n" +
+                    "Best regards,\n" +
+                    appName + " Team";
+            
+            sendEmail(toEmail, subject, body);
+            logger.info("Temporary password email sent to: {}", toEmail);
+        } catch (Exception e) {
+            logger.error("Error sending temporary password email: {}", e.getMessage());
+            throw new RuntimeException("Failed to send temporary password email");
+        }
+    }
     
     /**
      * Generic method to send email
      */
     private void sendEmail(String to, String subject, String body) {
-//        SimpleMailMessage message = new SimpleMailMessage();
-//        message.setFrom(fromEmail);
-//        message.setTo(to);
-//        message.setSubject(subject);
-//        message.setText(body);
-//
-//        mailSender.send(message);
+       SimpleMailMessage message = new SimpleMailMessage();
+       message.setFrom(fromEmail);
+       message.setTo(to);
+       message.setSubject(subject);
+       message.setText(body);
+
+       mailSender.send(message);
     }
 }

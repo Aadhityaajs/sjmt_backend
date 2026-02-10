@@ -20,6 +20,7 @@ public class AuthResponse {
     private UserRoleEnum role;
     private PrivilegesEnum privileges;
     private Long expiresIn;
+    private boolean requirePasswordChange;
     
     // Constructors
     public AuthResponse() {
@@ -27,7 +28,7 @@ public class AuthResponse {
     
     public AuthResponse(String accessToken, String refreshToken, Integer userId, 
                        String username, String email, String fullName,
-                       UserRoleEnum role, PrivilegesEnum privileges, Long expiresIn) {
+                       UserRoleEnum role, PrivilegesEnum privileges, Long expiresIn, boolean requirePasswordChange) {
         this.accessToken = accessToken;
         this.refreshToken = refreshToken;
         this.userId = userId;
@@ -37,6 +38,7 @@ public class AuthResponse {
         this.role = role;
         this.privileges = privileges;
         this.expiresIn = expiresIn;
+        this.requirePasswordChange = requirePasswordChange;
     }
     
     // Getters and Setters
@@ -118,5 +120,13 @@ public class AuthResponse {
     
     public void setExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
+    }
+
+    public boolean isRequirePasswordChange() {
+        return requirePasswordChange;
+    }
+
+    public void setRequirePasswordChange(boolean requirePasswordChange) {
+        this.requirePasswordChange = requirePasswordChange;
     }
 }
