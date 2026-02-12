@@ -1,7 +1,6 @@
 package com.sjmt.SJMT.Service;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -13,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.sjmt.SJMT.DTO.RequestDTO.CreateUserRequest;
 import com.sjmt.SJMT.DTO.ResponseDTO.UserResponse;
-import com.sjmt.SJMT.Entity.EmailVerificationTokenEntity;
 import com.sjmt.SJMT.Entity.PrivilegesEnum;
 import com.sjmt.SJMT.Entity.UserEntity;
 import com.sjmt.SJMT.Entity.UserRoleEnum;
@@ -83,17 +81,17 @@ public class UserService {
         user.setEmailVerified(false);
         
         // Set temporary password (will be changed during email verification)
-        String tempPassword = UUID.randomUUID().toString();
-        user.setPassword(passwordEncoder.encode(tempPassword));
+        // String tempPassword = UUID.randomUUID().toString();
+        // user.setPassword(passwordEncoder.encode(tempPassword));
         
         // Save user
         UserEntity savedUser = userRepository.save(user);
         
         // Create email verification token
-        EmailVerificationTokenEntity token = tokenService.createEmailVerificationToken(savedUser);
+        tokenService.createEmailVerificationToken(savedUser);
         
         // Send email with set password link
-        emailService.sendSetPasswordEmail(savedUser.getEmail(), token.getToken(), savedUser.getUsername());
+        // emailService.sendSetPasswordEmail(savedUser.getEmail(), token.getToken(), savedUser.getUsername());
         
         logger.info("User created successfully: {}", savedUser.getUsername());
         

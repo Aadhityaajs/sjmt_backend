@@ -4,10 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-import com.sjmt.SJMT.DTO.ResponseDTO.ApiResponse;
 
 
 /**
@@ -82,28 +80,53 @@ public class EmailService {
         }
     }
     
+    // /**
+    //  * Send password set link for new staff members
+    //  */
+    // public void sendSetPasswordEmail(String toEmail, String token, String username) {
+    //     try {
+    //         String subject = "Set Your Password - " + appName;
+    //         String setPasswordUrl = baseUrl + "/api/auth/verify-email?token=" + token;
+            
+    //         String body = "Hello " + username + ",\n\n" +
+    //                 "Your account has been created in " + appName + ".\n\n" +
+    //                 "Please click the link below to verify your email and set your password:\n" +
+    //                 setPasswordUrl + "\n\n" +
+    //                 "This link will expire in 24 hours.\n\n" +
+    //                 "If you have any questions, please contact your administrator.\n\n" +
+    //                 "Best regards,\n" +
+    //                 appName + " Team";
+            
+    //         sendEmail(toEmail, subject, body);
+    //         logger.info("Set password email sent to: {}", toEmail);
+    //     } catch (Exception e) {
+    //         logger.error("Error sending set password email: {}", e.getMessage());
+    //         throw new RuntimeException("Failed to send set password email");
+    //     }
+    // }
+
     /**
-     * Send password set link for new staff members
+     * Send temporary password email after email verification
      */
-    public void sendSetPasswordEmail(String toEmail, String token, String username) {
+    public void sendTemporaryPasswordEmail(String toEmail, String tempPassword, String username) {
         try {
-            String subject = "Set Your Password - " + appName;
-            String setPasswordUrl = baseUrl + "/api/auth/verify-email?token=" + token;
+            String subject = "Your Temporary Password - " + appName;
             
             String body = "Hello " + username + ",\n\n" +
-                    "Your account has been created in " + appName + ".\n\n" +
-                    "Please click the link below to verify your email and set your password:\n" +
-                    setPasswordUrl + "\n\n" +
-                    "This link will expire in 24 hours.\n\n" +
-                    "If you have any questions, please contact your administrator.\n\n" +
+                    "Your email has been verified successfully!\n\n" +
+                    "Here is your temporary password to login:\n\n" +
+                    "Username: " + username + "\n" +
+                    "Temporary Password: " + tempPassword + "\n\n" +
+                    "IMPORTANT: For security reasons, you will be required to change this password on your first login.\n\n" +
+                    "Please login at: " + baseUrl + "\n\n" +
                     "Best regards,\n" +
                     appName + " Team";
             
             sendEmail(toEmail, subject, body);
-            logger.info("Set password email sent to: {}", toEmail);
+            logger.info("Temporary password email sent to: {}", toEmail);
         } catch (Exception e) {
-            logger.error("Error sending set password email: {}", e.getMessage());
-            throw new RuntimeException("Failed to send set password email");
+            logger.error("Error sending temporary password email: {}", e.getMessage());
+            throw new RuntimeException("Failed to send temporary password email");
         }
     }
     

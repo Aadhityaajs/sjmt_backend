@@ -74,6 +74,13 @@ public class UserEntity {
     @Column(name = "privileges", nullable = false, length = 10)
     private PrivilegesEnum privileges = PrivilegesEnum.READ;
 
+    @NotNull(message = "Temporary Password is required")
+    @Column(name = "temporary_password", nullable = false)
+    private boolean temporaryPassword = false;
+
+    @Column(name = "temporary_password_plain", nullable = true)
+    private String tempPasswordPlain;
+
     // Constructors
     public UserEntity() {
     }
@@ -89,6 +96,7 @@ public class UserEntity {
         this.role = role;
         this.status = status;
         this.privileges = privileges;
+        this.temporaryPassword = false;
     }
 
     // Getters and Setters
@@ -186,5 +194,21 @@ public class UserEntity {
 
     public void setPrivileges(PrivilegesEnum privileges) {
         this.privileges = privileges;
+    }
+
+    public boolean isTemporaryPassword() {
+        return temporaryPassword;
+    }
+
+    public void setTemporaryPassword(boolean temporaryPassword) {
+        this.temporaryPassword = temporaryPassword;
+    }
+
+    public String getTempPasswordPlain() {
+        return tempPasswordPlain;
+    }
+
+    public void setTempPasswordPlain(String tempPasswordPlain) {
+        this.tempPasswordPlain = tempPasswordPlain;
     }
 }

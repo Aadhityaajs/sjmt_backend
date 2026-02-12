@@ -1,5 +1,6 @@
 package com.sjmt.SJMT.Service;
 
+import java.security.SecureRandom;
 import java.time.LocalDateTime;
 
 import org.slf4j.Logger;
@@ -14,8 +15,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sjmt.SJMT.DTO.ResponseDTO.AuthResponse;
 import com.sjmt.SJMT.DTO.RequestDTO.LoginRequest;
+import com.sjmt.SJMT.DTO.ResponseDTO.AuthResponse;
 import com.sjmt.SJMT.Entity.EmailVerificationTokenEntity;
 import com.sjmt.SJMT.Entity.PasswordResetTokenEntity;
 import com.sjmt.SJMT.Entity.RefreshTokenEntity;
@@ -23,6 +24,7 @@ import com.sjmt.SJMT.Entity.UserEntity;
 import com.sjmt.SJMT.Repository.UserRepository;
 import com.sjmt.SJMT.Security.CustomUserDetailsService;
 import com.sjmt.SJMT.Security.JwtUtil;
+
 
 /**
  * Authentication Service
@@ -54,6 +56,8 @@ public class AuthenticationService {
     
     @Autowired
     private CustomUserDetailsService userDetailsService;
+
+
     
     /**
      * Login user and generate tokens
@@ -175,8 +179,26 @@ public class AuthenticationService {
         
         // Mark token as used
         tokenService.markEmailVerificationTokenAsUsed(verificationToken);
+
+        boolean used_token = verificationToken.isUsed();
+
+        if(used_token && user.isEmailVerified()){ 
+            logger.info("Email verified successfully for user: {}", user.getUsername());
+
+            // Send temporary password email
+            String tempPassword = generateTemporaryPassword();
+            user.setPassword(passwordEncoder.encode(tempPassword));
+            user.setTemporaryPassword(true);
+            user.setTempPasswordPlain(tempPassword);
+            userRepository.save(user);
+
+            emailService.sendTemporaryPasswordEmail(user.getEmail(), tempPassword, user.getUsername());
+
+            logger.info("Temporary password has been sent to user: {}", user.getUsername());
+
+        } 
         
-        logger.info("Email verified successfully for user: {}", user.getUsername());
+        
     }
     
     /**
@@ -246,4 +268,20 @@ public class AuthenticationService {
         
         logger.info("Password changed successfully for user: {}", username);
     }
+
+    /*
+    generate temporary password for email verification
+     */
+    public String generateTemporaryPassword() {
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+        SecureRandom random = new SecureRandom();
+        StringBuilder password = new StringBuilder();
+
+        for (int i = 0; i < 8; i++) {
+            password.append(chars.charAt(random.nextInt(chars.length())));
+        }
+
+        return password.toString();
+    }
+
 }
