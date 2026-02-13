@@ -28,4 +28,5 @@ public interface UnitOfMeasurementRepository extends JpaRepository<UnitOfMeasure
     Boolean existsByNameIgnoreCase(String name);
     
     Optional<UnitOfMeasurementEntity> findByNameIgnoreCase(String name);
+
 }

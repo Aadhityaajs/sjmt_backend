@@ -18,17 +18,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.sjmt.SJMT.DTO.RequestDTO.MarkAttendanceRequest;
+import com.sjmt.SJMT.DTO.RequestDTO.UpdateAttendanceRequest;
 import com.sjmt.SJMT.DTO.ResponseDTO.AttendanceResponse;
 import com.sjmt.SJMT.DTO.ResponseDTO.DailyReportResponse;
-import com.sjmt.SJMT.DTO.RequestDTO.MarkAttendanceRequest;
 import com.sjmt.SJMT.DTO.ResponseDTO.MonthlyReportResponse;
 import com.sjmt.SJMT.DTO.ResponseDTO.UnmarkedDatesResponse;
-import com.sjmt.SJMT.DTO.RequestDTO.UpdateAttendanceRequest;
-
 import com.sjmt.SJMT.Entity.UserEntity;
 import com.sjmt.SJMT.Repository.UserRepository;
 import com.sjmt.SJMT.Service.AttendanceService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 /**
@@ -40,6 +43,9 @@ import jakarta.validation.Valid;
  */
 @RestController
 @RequestMapping("/api/attendance")
+@SecurityRequirement(name = "Bearer Authentication")
+@PreAuthorize("hasRole('ADMIN')")
+@Tag(name = "Attendance", description = "Attendance management APIs")
 public class AttendanceController {
 
     private static final Logger logger = LoggerFactory.getLogger(AttendanceController.class);
@@ -55,7 +61,7 @@ public class AttendanceController {
      * POST /api/attendance/mark
      */
     @PostMapping("/mark")
-    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Mark attendance", description = "Mark attendance for a user (Admin only)")
     public ResponseEntity<AttendanceResponse> markAttendance(
             @Valid @RequestBody MarkAttendanceRequest request,
             Authentication authentication) {
@@ -81,7 +87,7 @@ public class AttendanceController {
      * PUT /api/attendance/update
      */
     @PutMapping("/update")
-    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Update attendance", description = "Update existing attendance record (Admin only)")
     public ResponseEntity<AttendanceResponse> updateAttendance(
             @Valid @RequestBody UpdateAttendanceRequest request,
             Authentication authentication) {
@@ -107,7 +113,7 @@ public class AttendanceController {
      * GET /api/attendance/daily-report?date=2026-02-07
      */
     @GetMapping("/daily-report")
-    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Get daily attendance report", description = "Get attendance report for all users on a specific date (Admin only)")
     public ResponseEntity<DailyReportResponse> getDailyReport(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
 
@@ -123,7 +129,7 @@ public class AttendanceController {
      * GET /api/attendance/user-report?userId=1&startDate=2026-02-01&endDate=2026-02-07
      */
     @GetMapping("/user-report")
-    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Get user attendance report", description = "Get attendance records for a specific user within date range (Admin only)")
     public ResponseEntity<List<AttendanceResponse>> getUserReport(
             @RequestParam Integer userId,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
@@ -142,7 +148,7 @@ public class AttendanceController {
      * GET /api/attendance/monthly-report?userId=1&month=2&year=2026
      */
     @GetMapping("/monthly-report")
-    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Get monthly attendance report", description = "Get monthly attendance report for a specific user (Admin only)")
     public ResponseEntity<MonthlyReportResponse> getMonthlyReport(
             @RequestParam Integer userId,
             @RequestParam Integer month,
@@ -161,7 +167,7 @@ public class AttendanceController {
      * GET /api/attendance/monthly-report-all?month=2&year=2026
      */
     @GetMapping("/monthly-report-all")
-    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Get monthly reports for all users", description = "Get monthly attendance reports for all users (Admin only)")
     public ResponseEntity<List<MonthlyReportResponse>> getAllUsersMonthlyReport(
             @RequestParam Integer month,
             @RequestParam Integer year) {
@@ -178,7 +184,7 @@ public class AttendanceController {
      * GET /api/attendance/unmarked-dates?startDate=2026-02-01&endDate=2026-02-07
      */
     @GetMapping("/unmarked-dates")
-    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Get unmarked dates", description = "Get list of dates with incomplete attendance marking (Admin only)")
     public ResponseEntity<List<UnmarkedDatesResponse>> getUnmarkedDates(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate) {

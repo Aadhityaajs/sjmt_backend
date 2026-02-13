@@ -122,4 +122,5 @@ public class UnitOfMeasurementEntity {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
+
 }

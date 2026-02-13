@@ -19,7 +19,7 @@ public interface SubCategoryRepository extends JpaRepository<SubCategoryEntity, 
     List<SubCategoryEntity> findByStatus(RecordStatusEnum status);
     
     List<SubCategoryEntity> findByCategoryIdAndStatus(Integer categoryId, RecordStatusEnum status);
-    
+    Optional<SubCategoryEntity> findByNameAndCategoryId(String name, Integer categoryId);
     @Query("SELECT s FROM SubCategoryEntity s WHERE " +
            "(:status IS NULL OR s.status = :status) AND " +
            "(LOWER(s.name) LIKE LOWER(CONCAT('%', :search, '%')) OR " +
