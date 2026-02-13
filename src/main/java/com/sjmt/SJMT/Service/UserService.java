@@ -10,8 +10,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.sjmt.SJMT.Config.TemporaryPassword;
 import com.sjmt.SJMT.DTO.RequestDTO.CreateUserRequest;
 import com.sjmt.SJMT.DTO.ResponseDTO.UserResponse;
+import com.sjmt.SJMT.Entity.EmailVerificationTokenEntity;
 import com.sjmt.SJMT.Entity.PrivilegesEnum;
 import com.sjmt.SJMT.Entity.UserEntity;
 import com.sjmt.SJMT.Entity.UserRoleEnum;
@@ -39,6 +41,9 @@ public class UserService {
     
     @Autowired
     private EmailService emailService;
+
+    @Autowired
+    private TemporaryPassword temporaryPassword;
     
     /**
      * Create new user (by Admin)
@@ -88,10 +93,10 @@ public class UserService {
         UserEntity savedUser = userRepository.save(user);
         
         // Create email verification token
-        tokenService.createEmailVerificationToken(savedUser);
+        EmailVerificationTokenEntity token = tokenService.createEmailVerificationToken(savedUser);
         
         // Send email with set password link
-        // emailService.sendSetPasswordEmail(savedUser.getEmail(), token.getToken(), savedUser.getUsername());
+        emailService.sendEmailVerification(savedUser.getEmail(), token.getToken(), savedUser.getUsername());
         
         logger.info("User created successfully: {}", savedUser.getUsername());
         
@@ -240,15 +245,18 @@ public class UserService {
         UserEntity user = userRepository.findById(userId)
             .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
         
-        // Create password reset token
-        tokenService.createPasswordResetToken(user);
+        // // Create password reset token
+        // tokenService.createPasswordResetToken(user);
+
+        // Send temporary password email
+            String tempPassword = temporaryPassword.generateTemporaryPassword();
+            user.setPassword(passwordEncoder.encode(tempPassword));
+            user.setTemporaryPassword(true);
+            user.setTempPasswordPlain(tempPassword);
+            userRepository.save(user);
         
         // Send password reset email
-        emailService.sendPasswordResetEmail(
-            user.getEmail(), 
-            tokenService.createPasswordResetToken(user).getToken(), 
-            user.getUsername()
-        );
+        emailService.sendPasswordResetEmail(user.getEmail(), tempPassword, user.getUsername());
         
         logger.info("Password reset email sent to user: {}", user.getUsername());
     }

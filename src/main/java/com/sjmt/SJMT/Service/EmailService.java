@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
@@ -58,25 +59,25 @@ public class EmailService {
     /**
      * Send password reset link
      */
-    public void sendPasswordResetEmail(String toEmail, String token, String username) {
+    public void sendPasswordResetEmail(String toEmail, String tempPassword, String username) {
         try {
             String subject = "Password Reset Request - " + appName;
-            String resetUrl = baseUrl + "/api/auth/reset-password?token=" + token;
-            
+                        
             String body = "Hello " + username + ",\n\n" +
                     "We received a request to reset your password for your " + appName + " account.\n\n" +
-                    "Please click the link below to reset your password:\n" +
-                    resetUrl + "\n\n" +
-                    "This link will expire in 10 minutes.\n\n" +
-                    "If you did not request a password reset, please ignore this email or contact support if you have concerns.\n\n" +
+                    "Here is your temporary password to login:\n\n" +
+                    "Username: " + username + "\n" +
+                    "Temporary Password: " + tempPassword + "\n\n" +
+                    "IMPORTANT: For security reasons, you will be required to change this password after login.\n\n" +
+                    "Please login at: " + baseUrl + "\n\n" +
                     "Best regards,\n" +
                     appName + " Team";
             
             sendEmail(toEmail, subject, body);
-            logger.info("Password reset email sent to: {}", toEmail);
+            logger.info("Temporary Password has been sent for reseting password to: {}", toEmail);
         } catch (Exception e) {
-            logger.error("Error sending password reset email: {}", e.getMessage());
-            throw new RuntimeException("Failed to send password reset email");
+            logger.error("Error sending tempory password email for reseting password: {}", e.getMessage());
+            throw new RuntimeException("Failed to send  temporary password email for reseting password");
         }
     }
     
@@ -134,12 +135,12 @@ public class EmailService {
      * Generic method to send email
      */
     private void sendEmail(String to, String subject, String body) {
-//        SimpleMailMessage message = new SimpleMailMessage();
-//        message.setFrom(fromEmail);
-//        message.setTo(to);
-//        message.setSubject(subject);
-//        message.setText(body);
-//
-//        mailSender.send(message);
+       SimpleMailMessage message = new SimpleMailMessage();
+       message.setFrom(fromEmail);
+       message.setTo(to);
+       message.setSubject(subject);
+       message.setText(body);
+
+       mailSender.send(message);
     }
 }

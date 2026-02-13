@@ -1,6 +1,5 @@
 package com.sjmt.SJMT.Service;
 
-import java.security.SecureRandom;
 import java.time.LocalDateTime;
 
 import org.slf4j.Logger;
@@ -15,6 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.sjmt.SJMT.Config.TemporaryPassword;
 import com.sjmt.SJMT.DTO.RequestDTO.LoginRequest;
 import com.sjmt.SJMT.DTO.ResponseDTO.AuthResponse;
 import com.sjmt.SJMT.Entity.EmailVerificationTokenEntity;
@@ -57,7 +57,8 @@ public class AuthenticationService {
     @Autowired
     private CustomUserDetailsService userDetailsService;
 
-
+    @Autowired
+    private TemporaryPassword temporaryPassword;
     
     /**
      * Login user and generate tokens
@@ -186,7 +187,7 @@ public class AuthenticationService {
             logger.info("Email verified successfully for user: {}", user.getUsername());
 
             // Send temporary password email
-            String tempPassword = generateTemporaryPassword();
+            String tempPassword = temporaryPassword.generateTemporaryPassword();
             user.setPassword(passwordEncoder.encode(tempPassword));
             user.setTemporaryPassword(true);
             user.setTempPasswordPlain(tempPassword);
@@ -269,19 +270,6 @@ public class AuthenticationService {
         logger.info("Password changed successfully for user: {}", username);
     }
 
-    /*
-    generate temporary password for email verification
-     */
-    public String generateTemporaryPassword() {
-        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-        SecureRandom random = new SecureRandom();
-        StringBuilder password = new StringBuilder();
-
-        for (int i = 0; i < 8; i++) {
-            password.append(chars.charAt(random.nextInt(chars.length())));
-        }
-
-        return password.toString();
-    }
+    
 
 }
