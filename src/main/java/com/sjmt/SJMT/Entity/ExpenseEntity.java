@@ -118,6 +118,9 @@ public class ExpenseEntity {
         this.updatedBy = updatedBy;
     }
 
+    public ExpenseEntity() {
+    }
+
     public Integer getExpenseId() {
         return expenseId;
     }
