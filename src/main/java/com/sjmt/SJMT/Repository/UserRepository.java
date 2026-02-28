@@ -1,11 +1,13 @@
 package com.sjmt.SJMT.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.sjmt.SJMT.Entity.UserEntity;
+import com.sjmt.SJMT.Entity.UserStatusEnum;
 
 /**
  * User Repository
@@ -24,4 +26,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer> {
     Boolean existsByUsername(String username);
     
     Boolean existsByEmail(String email);
+
+    List<UserEntity> findByStatus(UserStatusEnum status);
 }

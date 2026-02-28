@@ -80,6 +80,66 @@ public class GlobalExceptionHandler {
     }
     
     /**
+     * Handle AttendanceAlreadyExistsException
+     * HTTP Status: 409 Conflict
+     */
+    @ExceptionHandler(AttendanceAlreadyExistsException.class)
+    public ResponseEntity<ApiResponse<Void>> handleAttendanceAlreadyExists(
+            AttendanceAlreadyExistsException ex, WebRequest request) {
+        logger.warn("Attendance already exists: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+            .body(ApiResponse.error(ex.getMessage()));
+    }
+
+    /**
+     * Handle AttendanceNotFoundException
+     * HTTP Status: 404 Not Found
+     */
+    @ExceptionHandler(AttendanceNotFoundException.class)
+    public ResponseEntity<ApiResponse<Void>> handleAttendanceNotFound(
+            AttendanceNotFoundException ex, WebRequest request) {
+        logger.warn("Attendance not found: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body(ApiResponse.error(ex.getMessage()));
+    }
+
+    /**
+     * Handle UserNotFoundException
+     * HTTP Status: 404 Not Found
+     */
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<ApiResponse<Void>> handleUserNotFound(
+            UserNotFoundException ex, WebRequest request) {
+        logger.warn("User not found: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body(ApiResponse.error(ex.getMessage()));
+    }
+
+    /**
+     * Handle UserNotActiveException
+     * HTTP Status: 400 Bad Request
+     */
+    @ExceptionHandler(UserNotActiveException.class)
+    public ResponseEntity<ApiResponse<Void>> handleUserNotActive(
+            UserNotActiveException ex, WebRequest request) {
+        logger.warn("User not active: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+            .body(ApiResponse.error(ex.getMessage()));
+    }
+
+    /**
+     * Handle InvalidDateRangeException
+     * HTTP Status: 400 Bad Request
+     */
+    @ExceptionHandler(InvalidDateRangeException.class)
+    public ResponseEntity<ApiResponse<Void>> handleInvalidDateRange(
+            InvalidDateRangeException ex, WebRequest request) {
+        logger.warn("Invalid date range: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+            .body(ApiResponse.error(ex.getMessage()));
+    }
+
+    /**
      * Handle runtime exceptions
      */
     @ExceptionHandler(RuntimeException.class)

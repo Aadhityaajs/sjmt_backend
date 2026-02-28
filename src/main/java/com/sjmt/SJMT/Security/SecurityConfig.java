@@ -123,12 +123,17 @@ public class SecurityConfig {
 
                 // ADMIN ONLY
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                .requestMatchers("/api/attendance/**").hasRole("ADMIN")
 
-                // AUTHENTICATED USERS
+                // AUTHENTICATED USERS (privilege-based access handled by @PreAuthorize)
                 .requestMatchers(
                     "/api/users/**",
                     "/api/auth/logout",
-                    "/api/auth/change-password"
+                    "/api/auth/change-password",
+                    "/api/inventory/**",
+                    "/api/categories/**",
+                    "/api/subcategories/**",
+                    "/api/units/**"
                 ).authenticated()
 
                 // EVERYTHING ELSE

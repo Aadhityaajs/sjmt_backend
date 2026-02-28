@@ -2,6 +2,9 @@ package com.sjmt.SJMT.Config;
 
 import java.security.SecureRandom;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TemporaryPassword {
     /*
     generate temporary password for email verification
