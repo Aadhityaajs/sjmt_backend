@@ -1,0 +1,265 @@
+2026-01-18 15:19:48 [restartedMain] INFO  c.c.t.TelegramPdfSenderApplication - Starting TelegramPdfSenderApplication using Java 24.0.1 with PID 23980 (C:\PDF Sending Task\telegram-pdf-sender\telegram-pdf-sender\target\classes started by sgout in C:\PDF Sending Task\telegram-pdf-sender)
+2026-01-18 15:19:48 [restartedMain] DEBUG c.c.t.TelegramPdfSenderApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-01-18 15:19:48 [restartedMain] INFO  c.c.t.TelegramPdfSenderApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-18 15:19:48 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-18 15:19:48 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-18 15:19:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-18 15:19:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-18 15:19:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-01-18 15:19:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-18 15:19:50 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2077 ms
+2026-01-18 15:19:51 [restartedMain] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2026-01-18 15:19:51 [restartedMain] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2026-01-18 15:19:51 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-01-18 15:19:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-01-18 15:19:51 [restartedMain] INFO  c.c.t.TelegramPdfSenderApplication - Started TelegramPdfSenderApplication in 4.114 seconds (process running for 5.281)
+2026-01-18 15:27:41 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-18 15:27:41 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-18 15:27:41 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-01-18 15:27:41 [http-nio-8080-exec-2] ERROR c.c.t.e.GlobalExceptionHandler - Unhandled exception occurred
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:126)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:507)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1283)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-01-18 15:27:41 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-18 15:27:49 [http-nio-8080-exec-5] ERROR c.c.t.e.GlobalExceptionHandler - Unhandled exception occurred
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:126)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:507)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1283)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-01-18 15:27:49 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-18 15:28:36 [http-nio-8080-exec-4] INFO  c.c.t.controller.PdfController - Get today's PDFs endpoint called
+2026-01-18 15:28:36 [http-nio-8080-exec-4] INFO  c.c.t.service.PdfFileService - Fetching today's PDF files from: G:/cement_project_pdf
+2026-01-18 15:28:36 [http-nio-8080-exec-4] DEBUG c.c.t.service.PdfFileService - Filtering files between 2026-01-18T00:00 and 2026-01-19T00:00
+2026-01-18 15:28:36 [http-nio-8080-exec-4] INFO  c.c.t.service.PdfFileService - Found 0 PDF file(s) uploaded today out of 1 total files
+2026-01-18 15:32:09 [http-nio-8080-exec-9] INFO  c.c.t.controller.PdfController - Get today's PDFs endpoint called
+2026-01-18 15:32:09 [http-nio-8080-exec-9] INFO  c.c.t.service.PdfFileService - Fetching today's PDF files from: G:/cement_project_pdf
+2026-01-18 15:32:09 [http-nio-8080-exec-9] DEBUG c.c.t.service.PdfFileService - Filtering files between 2026-01-18T00:00 and 2026-01-19T00:00
+2026-01-18 15:32:09 [http-nio-8080-exec-9] INFO  c.c.t.service.PdfFileService - Found 1 PDF file(s) uploaded today out of 2 total files
+2026-01-18 15:33:39 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2026-01-18 15:33:39 [SpringApplicationShutdownHook] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2026-01-18 15:33:44 [restartedMain] INFO  c.c.t.TelegramPdfSenderApplication - Starting TelegramPdfSenderApplication using Java 24.0.1 with PID 13880 (C:\PDF Sending Task\telegram-pdf-sender\telegram-pdf-sender\target\classes started by sgout in C:\PDF Sending Task\telegram-pdf-sender)
+2026-01-18 15:33:44 [restartedMain] DEBUG c.c.t.TelegramPdfSenderApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-01-18 15:33:44 [restartedMain] INFO  c.c.t.TelegramPdfSenderApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-18 15:33:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-18 15:33:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-18 15:33:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-18 15:33:46 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-18 15:33:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-01-18 15:33:46 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-18 15:33:46 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2217 ms
+2026-01-18 15:33:47 [restartedMain] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2026-01-18 15:33:48 [restartedMain] DEBUG o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2026-01-18 15:33:48 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-01-18 15:33:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-01-18 15:33:48 [restartedMain] INFO  c.c.t.TelegramPdfSenderApplication - Started TelegramPdfSenderApplication in 4.546 seconds (process running for 5.544)
+2026-01-18 15:34:44 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-18 15:34:44 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-18 15:34:44 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-01-18 15:34:44 [http-nio-8080-exec-1] INFO  c.c.t.controller.PdfController - Get today's PDFs endpoint called
+2026-01-18 15:34:44 [http-nio-8080-exec-1] INFO  c.c.t.service.PdfFileService - Fetching today's PDF files from: G:/cement_project_pdf
+2026-01-18 15:34:44 [http-nio-8080-exec-1] DEBUG c.c.t.service.PdfFileService - Filtering files between 2026-01-18T00:00 and 2026-01-19T00:00
+2026-01-18 15:34:44 [http-nio-8080-exec-1] INFO  c.c.t.service.PdfFileService - Found 1 PDF file(s) uploaded today out of 2 total files
+2026-01-18 15:36:59 [http-nio-8080-exec-9] INFO  c.c.t.controller.PdfController - Get all PDFs endpoint called
+2026-01-18 15:36:59 [http-nio-8080-exec-9] INFO  c.c.t.service.PdfFileService - Fetching all PDF files from: G:/cement_project_pdf
+2026-01-18 15:36:59 [http-nio-8080-exec-9] INFO  c.c.t.service.PdfFileService - Found 2 total PDF file(s)
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - ================================================================================
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - 📅 DAILY PDF SCHEDULER TRIGGERED
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - 🕐 Execution Time: 2026-01-18 15:37:00
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - ⚙️  Cron Expression: 0 37 15 * * *
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - ================================================================================
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfFileService - Fetching today's PDF files from: G:/cement_project_pdf
+2026-01-18 15:37:00 [scheduling-1] DEBUG c.c.t.service.PdfFileService - Filtering files between 2026-01-18T00:00 and 2026-01-19T00:00
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfFileService - Found 1 PDF file(s) uploaded today out of 2 total files
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - 📊 Files Summary:
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService -   - Total files found today: 1
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - 📤 Preparing to send 1 PDF file(s)
+2026-01-18 15:37:00 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService -   1. basic-text.pdf (72.91 KB)
+2026-01-18 15:37:05 [scheduling-1] INFO  c.c.t.service.TelegramBotService - Message sent successfully to chat: 1315851716
+2026-01-18 15:37:05 [scheduling-1] INFO  c.c.t.service.PdfFileService - File Details:
+2026-01-18 15:37:05 [scheduling-1] INFO  c.c.t.service.PdfFileService -   Name: basic-text.pdf
+2026-01-18 15:37:05 [scheduling-1] INFO  c.c.t.service.PdfFileService -   Path: G:\cement_project_pdf\basic-text.pdf
+2026-01-18 15:37:05 [scheduling-1] INFO  c.c.t.service.PdfFileService -   Size: 72.91 KB
+2026-01-18 15:37:05 [scheduling-1] INFO  c.c.t.service.PdfFileService -   Last Modified: 2026-01-18T15:31:22.160
+2026-01-18 15:37:05 [scheduling-1] INFO  c.c.t.service.TelegramBotService - Attempting to send PDF: basic-text.pdf
+2026-01-18 15:37:08 [scheduling-1] INFO  c.c.t.service.TelegramBotService - ✅ PDF sent successfully: basic-text.pdf
+2026-01-18 15:37:08 [scheduling-1] INFO  c.c.t.service.TelegramBotService - Message sent successfully to chat: 1315851716
+2026-01-18 15:37:08 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - ✅ PDF Sending Completed:
+2026-01-18 15:37:08 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService -   - Total: 1
+2026-01-18 15:37:08 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService -   - Sent Successfully: 1
+2026-01-18 15:37:08 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService -   - Failed: 0
+2026-01-18 15:37:08 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - ✅ Daily PDF scheduler task completed successfully
+2026-01-18 15:37:08 [scheduling-1] INFO  c.c.t.service.PdfSchedulerService - ================================================================================
+2026-01-18 15:46:52 [http-nio-8080-exec-8] INFO  c.c.t.controller.PdfController - Status endpoint called
+2026-01-18 15:46:52 [http-nio-8080-exec-8] INFO  c.c.t.service.PdfFileService - Fetching today's PDF files from: G:/cement_project_pdf
+2026-01-18 15:46:52 [http-nio-8080-exec-8] DEBUG c.c.t.service.PdfFileService - Filtering files between 2026-01-18T00:00 and 2026-01-19T00:00
+2026-01-18 15:46:52 [http-nio-8080-exec-8] INFO  c.c.t.service.PdfFileService - Found 1 PDF file(s) uploaded today out of 2 total files
+2026-01-18 15:46:52 [http-nio-8080-exec-8] INFO  c.c.t.service.PdfFileService - Fetching all PDF files from: G:/cement_project_pdf
+2026-01-18 15:46:52 [http-nio-8080-exec-8] INFO  c.c.t.service.PdfFileService - Found 2 total PDF file(s)
+2026-01-18 15:55:47 [http-nio-8080-exec-5] ERROR c.c.t.e.GlobalExceptionHandler - Unhandled exception occurred
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/pdf/send-today.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-01-18 15:55:47 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/pdf/send-today.]
+2026-01-18 15:55:56 [http-nio-8080-exec-4] INFO  c.c.t.controller.PdfController - Manual send today's PDFs triggered
+2026-01-18 15:55:56 [http-nio-8080-exec-4] INFO  c.c.t.service.PdfFileService - Fetching today's PDF files from: G:/cement_project_pdf
+2026-01-18 15:55:56 [http-nio-8080-exec-4] DEBUG c.c.t.service.PdfFileService - Filtering files between 2026-01-18T00:00 and 2026-01-19T00:00
+2026-01-18 15:55:56 [http-nio-8080-exec-4] INFO  c.c.t.service.PdfFileService - Found 1 PDF file(s) uploaded today out of 2 total files
+2026-01-18 15:55:58 [http-nio-8080-exec-4] INFO  c.c.t.service.TelegramBotService - Message sent successfully to chat: 1315851716
+2026-01-18 15:55:58 [http-nio-8080-exec-4] INFO  c.c.t.service.PdfFileService - File Details:
+2026-01-18 15:55:58 [http-nio-8080-exec-4] INFO  c.c.t.service.PdfFileService -   Name: basic-text.pdf
+2026-01-18 15:55:58 [http-nio-8080-exec-4] INFO  c.c.t.service.PdfFileService -   Path: G:\cement_project_pdf\basic-text.pdf
+2026-01-18 15:55:58 [http-nio-8080-exec-4] INFO  c.c.t.service.PdfFileService -   Size: 72.91 KB
+2026-01-18 15:55:58 [http-nio-8080-exec-4] INFO  c.c.t.service.PdfFileService -   Last Modified: 2026-01-18T15:31:22.160
+2026-01-18 15:55:58 [http-nio-8080-exec-4] INFO  c.c.t.service.TelegramBotService - Attempting to send PDF: basic-text.pdf
+2026-01-18 15:56:01 [http-nio-8080-exec-4] INFO  c.c.t.service.TelegramBotService - ✅ PDF sent successfully: basic-text.pdf
+2026-01-18 15:56:01 [http-nio-8080-exec-4] INFO  c.c.t.service.TelegramBotService - Message sent successfully to chat: 1315851716
+2026-01-18 15:56:53 [http-nio-8080-exec-2] WARN  c.c.t.controller.PdfController - Send all PDFs triggered - This should only be used for testing!
+2026-01-18 15:56:53 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService - Fetching all PDF files from: G:/cement_project_pdf
+2026-01-18 15:56:53 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService - Found 2 total PDF file(s)
+2026-01-18 15:56:57 [http-nio-8080-exec-2] INFO  c.c.t.service.TelegramBotService - Message sent successfully to chat: 1315851716
+2026-01-18 15:56:57 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService - File Details:
+2026-01-18 15:56:57 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService -   Name: basic-text.pdf
+2026-01-18 15:56:57 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService -   Path: G:\cement_project_pdf\basic-text.pdf
+2026-01-18 15:56:57 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService -   Size: 72.91 KB
+2026-01-18 15:56:57 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService -   Last Modified: 2026-01-18T15:31:22.160
+2026-01-18 15:56:57 [http-nio-8080-exec-2] INFO  c.c.t.service.TelegramBotService - Attempting to send PDF: basic-text.pdf
+2026-01-18 15:57:01 [http-nio-8080-exec-2] INFO  c.c.t.service.TelegramBotService - ✅ PDF sent successfully: basic-text.pdf
+2026-01-18 15:57:02 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService - File Details:
+2026-01-18 15:57:02 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService -   Name: che.pdf
+2026-01-18 15:57:02 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService -   Path: G:\cement_project_pdf\che.pdf
+2026-01-18 15:57:02 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService -   Size: 656.02 KB
+2026-01-18 15:57:02 [http-nio-8080-exec-2] INFO  c.c.t.service.PdfFileService -   Last Modified: 2022-01-20T19:30:04.139
+2026-01-18 15:57:02 [http-nio-8080-exec-2] INFO  c.c.t.service.TelegramBotService - Attempting to send PDF: che.pdf
+2026-01-18 15:57:08 [http-nio-8080-exec-2] INFO  c.c.t.service.TelegramBotService - ✅ PDF sent successfully: che.pdf
+2026-01-18 15:57:12 [http-nio-8080-exec-2] INFO  c.c.t.service.TelegramBotService - Message sent successfully to chat: 1315851716
+2026-01-18 15:58:44 [http-nio-8080-exec-6] INFO  c.c.t.controller.PdfController - Test message endpoint called
+2026-01-18 15:58:46 [http-nio-8080-exec-6] INFO  c.c.t.service.TelegramBotService - Message sent successfully to chat: 1315851716
