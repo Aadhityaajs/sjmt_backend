@@ -1,0 +1,3092 @@
+2026-03-12 16:07:05 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - Starting SjmtApplication using Java 24.0.1 with PID 18580 (C:\Billing and Quatation\sjmt_backend-main (4)\sjmt_backend-main\target\classes started by sgout in C:\Billing and Quatation\sjmt_backend-main (4))
+2026-03-12 16:07:05 [restartedMain] DEBUG com.sjmt.SJMT.SjmtApplication - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-03-12 16:07:05 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-12 16:07:05 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-12 16:07:05 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-12 16:07:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-12 16:07:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 251 ms. Found 15 JPA repository interfaces.
+2026-03-12 16:07:09 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-03-12 16:07:09 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-12 16:07:09 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-12 16:07:09 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4754 ms
+2026-03-12 16:07:10 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-12 16:07:10 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-03-12 16:07:11 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-12 16:07:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-12 16:07:12 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c58555
+2026-03-12 16:07:12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-12 16:07:12 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 16:07:13 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://72.62.75.169:5432/springboot_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: springboot_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-12 16:07:15 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-12 16:07:15 [restartedMain] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-03-12 16:07:17 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-12 16:07:17 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-12 16:07:17 [restartedMain] DEBUG c.s.S.S.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-12 16:07:18 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-12 16:07:18 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-12 16:07:20 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-12 16:07:21 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-12 16:07:22 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-03-12 16:07:22 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-03-12 16:07:22 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - Started SjmtApplication in 17.999 seconds (process running for 20.508)
+2026-03-12 16:09:02 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5c58555 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:09:12 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@15d69e04 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:09:26 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@79db9e35 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:11:16 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7d0f6d43 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:13:04 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5913f07d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:13:14 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@449026f1 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:13:24 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@19de3581 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:13:34 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@760d64a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:13:34 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s219ms834µs600ns).
+2026-03-12 16:13:44 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@75d83ca9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:14:04 [HikariPool-1:connection-adder] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Pool is empty, failed to create/setup connection (e7cf34cd-0f2a-49fb-893f-9a8820d78bb4)
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:385)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:279)
+	at org.postgresql.Driver.makeConnection(Driver.java:448)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: java.net.NoRouteToHostException: No route to host: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
+	at java.base/java.net.Socket.connect(Socket.java:665)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289)
+	... 14 common frames omitted
+2026-03-12 16:15:09 [HikariPool-1:connection-adder] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Pool is empty, failed to create/setup connection (c382b3b4-592e-49ec-9392-69ae017904cb)
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:385)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:279)
+	at org.postgresql.Driver.makeConnection(Driver.java:448)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: java.net.NoRouteToHostException: No route to host: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
+	at java.base/java.net.Socket.connect(Socket.java:665)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289)
+	... 14 common frames omitted
+2026-03-12 16:16:21 [HikariPool-1:connection-adder] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Pool is empty, failed to create/setup connection (8455fa99-d2d1-48d3-9a0d-9f571e8c9487)
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:385)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:279)
+	at org.postgresql.Driver.makeConnection(Driver.java:448)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:317)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:345)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:790)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:983)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:970)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144)
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76)
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:477)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:745)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:234)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289)
+	... 14 common frames omitted
+2026-03-12 16:19:17 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@20e72542 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:21:48 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-12 16:21:48 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-12 16:21:48 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-12 16:21:48 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-12 16:21:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-12 16:21:56 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - Starting SjmtApplication using Java 24.0.1 with PID 26832 (C:\Billing and Quatation\sjmt_backend-main (4)\sjmt_backend-main\target\classes started by sgout in C:\Billing and Quatation\sjmt_backend-main (4))
+2026-03-12 16:21:56 [restartedMain] DEBUG com.sjmt.SJMT.SjmtApplication - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-03-12 16:21:56 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-12 16:21:56 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-12 16:21:56 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-12 16:21:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-12 16:21:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 316 ms. Found 15 JPA repository interfaces.
+2026-03-12 16:22:01 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-03-12 16:22:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-12 16:22:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-12 16:22:02 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 5701 ms
+2026-03-12 16:22:02 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-12 16:22:02 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-03-12 16:22:03 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-12 16:22:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-12 16:22:05 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3847a576
+2026-03-12 16:22:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-12 16:22:05 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 16:22:05 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://72.62.75.169:5432/springboot_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: springboot_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-12 16:22:08 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-12 16:22:08 [restartedMain] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-03-12 16:22:09 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-12 16:22:09 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-12 16:22:10 [restartedMain] DEBUG c.s.S.S.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-12 16:22:11 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-12 16:22:11 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-12 16:22:14 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-12 16:22:14 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-12 16:22:15 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-03-12 16:22:15 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-03-12 16:22:15 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - Started SjmtApplication in 20.51 seconds (process running for 21.937)
+2026-03-12 16:42:44 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@12739762 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 16:55:12 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-12 16:55:12 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-12 16:55:12 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-12 16:55:12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-12 16:55:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-12 16:55:19 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - Starting SjmtApplication using Java 24.0.1 with PID 20968 (C:\Billing and Quatation\sjmt_backend-main (4)\sjmt_backend-main\target\classes started by sgout in C:\Billing and Quatation\sjmt_backend-main (4))
+2026-03-12 16:55:19 [restartedMain] DEBUG com.sjmt.SJMT.SjmtApplication - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-03-12 16:55:19 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-12 16:55:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-12 16:55:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-12 16:55:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-12 16:55:25 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 587 ms. Found 17 JPA repository interfaces.
+2026-03-12 16:55:27 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-03-12 16:55:27 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-12 16:55:27 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-12 16:55:28 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 8354 ms
+2026-03-12 16:55:28 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-12 16:55:29 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-03-12 16:55:30 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-12 16:55:30 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-12 16:55:33 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b39d752
+2026-03-12 16:55:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-12 16:55:33 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 16:55:34 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://72.62.75.169:5432/springboot_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: springboot_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-12 16:55:37 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-12 16:55:37 [restartedMain] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-03-12 16:55:38 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table customer_bill_items (
+        id integer generated by default as identity,
+        cgst_amount numeric(15,2),
+        description varchar(500) not null,
+        discount_amount numeric(15,2),
+        discount_pct numeric(5,2),
+        gst_pct numeric(5,2),
+        hsn_code varchar(8),
+        igst_amount numeric(15,2),
+        line_total numeric(15,2),
+        quantity numeric(15,3) not null,
+        sgst_amount numeric(15,2),
+        unit varchar(20),
+        unit_price numeric(10,2) not null,
+        bill_id integer not null,
+        product_master_id integer,
+        primary key (id)
+    )
+2026-03-12 16:55:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table customer_bills (
+        id integer generated by default as identity,
+        balance_amount numeric(15,2),
+        bill_date date not null,
+        bill_number varchar(20) not null,
+        created_at timestamp(6) not null,
+        created_by varchar(100),
+        customer_snapshot TEXT,
+        due_date date not null,
+        is_interstate boolean not null,
+        notes TEXT,
+        paid_amount numeric(15,2),
+        payment_mode varchar(20) check ((payment_mode in ('CASH','CHEQUE','BANK_TRANSFER','UPI','CARD'))),
+        payment_reference varchar(100),
+        status varchar(20) not null check ((status in ('DRAFT','ISSUED','PARTIALLY_PAID','PAID','OVERDUE','CANCELLED'))),
+        stock_deducted boolean not null,
+        subtotal numeric(15,2),
+        terms TEXT,
+        total_amount numeric(15,2),
+        total_cgst numeric(15,2),
+        total_discount numeric(15,2),
+        total_igst numeric(15,2),
+        total_sgst numeric(15,2),
+        updated_at timestamp(6) not null,
+        customer_id integer not null,
+        quotation_id integer,
+        primary key (id)
+    )
+2026-03-12 16:55:39 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table quotation_items (
+        id integer generated by default as identity,
+        cgst_amount numeric(15,2),
+        description varchar(500) not null,
+        discount_amount numeric(15,2),
+        discount_pct numeric(5,2),
+        gst_pct numeric(5,2),
+        hsn_code varchar(8),
+        igst_amount numeric(15,2),
+        line_total numeric(15,2),
+        quantity numeric(15,3) not null,
+        sgst_amount numeric(15,2),
+        unit varchar(20),
+        unit_price numeric(10,2) not null,
+        product_master_id integer,
+        quotation_id integer not null,
+        primary key (id)
+    )
+2026-03-12 16:55:40 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table quotations (
+        id integer generated by default as identity,
+        created_at timestamp(6) not null,
+        created_by varchar(100),
+        customer_snapshot TEXT,
+        is_interstate boolean not null,
+        notes TEXT,
+        quotation_date date not null,
+        quotation_number varchar(20) not null,
+        status varchar(20) not null check ((status in ('DRAFT','SENT','ACCEPTED','REJECTED','EXPIRED','CONVERTED'))),
+        subtotal numeric(15,2),
+        terms TEXT,
+        total_amount numeric(15,2),
+        total_cgst numeric(15,2),
+        total_discount numeric(15,2),
+        total_igst numeric(15,2),
+        total_sgst numeric(15,2),
+        updated_at timestamp(6) not null,
+        valid_until date not null,
+        customer_id integer not null,
+        primary key (id)
+    )
+2026-03-12 16:55:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists customer_bills 
+       drop constraint if exists UKrc9dands52h7woehrxrdlxr5s
+2026-03-12 16:55:43 [restartedMain] WARN  org.hibernate.orm.jdbc.warn - HHH000247: ErrorCode: 0, SQLState: 00000
+2026-03-12 16:55:43 [restartedMain] WARN  org.hibernate.orm.jdbc.warn - constraint "ukrc9dands52h7woehrxrdlxr5s" of relation "customer_bills" does not exist, skipping
+2026-03-12 16:55:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists customer_bills 
+       add constraint UKrc9dands52h7woehrxrdlxr5s unique (bill_number)
+2026-03-12 16:55:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists quotations 
+       drop constraint if exists UK9kbnjdxcf5d7qxwy80ple68bh
+2026-03-12 16:55:43 [restartedMain] WARN  org.hibernate.orm.jdbc.warn - HHH000247: ErrorCode: 0, SQLState: 00000
+2026-03-12 16:55:43 [restartedMain] WARN  org.hibernate.orm.jdbc.warn - constraint "uk9kbnjdxcf5d7qxwy80ple68bh" of relation "quotations" does not exist, skipping
+2026-03-12 16:55:43 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists quotations 
+       add constraint UK9kbnjdxcf5d7qxwy80ple68bh unique (quotation_number)
+2026-03-12 16:55:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists customer_bill_items 
+       add constraint FKj78c9hcjfa7el2lkvmmwgsjw1 
+       foreign key (bill_id) 
+       references customer_bills
+2026-03-12 16:55:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists customer_bill_items 
+       add constraint FKbwtdw1r9xbq2uqhfhwyg0srjo 
+       foreign key (product_master_id) 
+       references product_master
+2026-03-12 16:55:45 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists customer_bills 
+       add constraint FKbknyewhdh2oxan2hy89yf8qvp 
+       foreign key (customer_id) 
+       references customers
+2026-03-12 16:55:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists customer_bills 
+       add constraint FKr3jpknj6s7xrvoqugkoicxp67 
+       foreign key (quotation_id) 
+       references quotations
+2026-03-12 16:55:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists quotation_items 
+       add constraint FK53hhxx7mekl7k76hnx53bkwhu 
+       foreign key (product_master_id) 
+       references product_master
+2026-03-12 16:55:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists quotation_items 
+       add constraint FK7y587hckcncga8qtka1i06cbp 
+       foreign key (quotation_id) 
+       references quotations
+2026-03-12 16:55:46 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists quotations 
+       add constraint FKbv6vp77w2lpnag5v0b8keobm9 
+       foreign key (customer_id) 
+       references customers
+2026-03-12 16:55:47 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-12 16:55:47 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-12 16:55:47 [restartedMain] DEBUG c.s.S.S.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-12 16:55:49 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-12 16:55:49 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-12 16:55:51 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-12 16:55:52 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-12 16:55:53 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-03-12 16:55:53 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-03-12 16:55:53 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - Started SjmtApplication in 35.323 seconds (process running for 36.442)
+2026-03-12 16:57:32 [http-nio-3000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-12 16:57:32 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-12 16:57:32 [http-nio-3000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2026-03-12 16:57:32 [http-nio-3000-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/login
+2026-03-12 16:57:32 [http-nio-3000-exec-1] ERROR com.sjmt.SJMT.Security.JwtUtil - JWT token is expired: JWT expired 587630399 milliseconds ago at 2026-03-05T16:13:42.000Z. Current time: 2026-03-12T11:27:32.399Z. Allowed clock skew: 0 milliseconds.
+2026-03-12 16:57:32 [http-nio-3000-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-12 16:57:32 [http-nio-3000-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/login
+2026-03-12 16:57:32 [http-nio-3000-exec-1] INFO  c.s.S.C.AuthenticationController - Login request received for: admin
+2026-03-12 16:57:34 [http-nio-3000-exec-1] INFO  c.s.S.Service.AuthenticationService - Login attempt for: admin
+2026-03-12 16:57:34 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 16:57:36 [http-nio-3000-exec-1] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-03-12 16:57:36 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 16:57:37 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 16:57:39 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expiry_date, revoked, token, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 16:57:40 [http-nio-3000-exec-1] INFO  c.s.S.Service.AuthenticationService - User logged in successfully: admin
+2026-03-12 16:57:40 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        email=?,
+        email_verified=?,
+        full_name=?,
+        last_login=?,
+        password=?,
+        phone_number=?,
+        privileges=?,
+        role=?,
+        status=?,
+        temporary_password=?,
+        updated_at=?,
+        username=? 
+    where
+        user_id=?
+2026-03-12 17:00:32 [http-nio-3000-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/quotations
+2026-03-12 17:00:32 [http-nio-3000-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:00:33 [http-nio-3000-exec-5] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:00:33 [http-nio-3000-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/quotations
+2026-03-12 17:00:33 [http-nio-3000-exec-5] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.createQuotation(com.sjmt.SJMT.DTO.RequestDTO.CreateQuotationRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:00:33 [http-nio-3000-exec-5] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.createQuotation(com.sjmt.SJMT.DTO.RequestDTO.CreateQuotationRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:00:33 [http-nio-3000-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:00:33 [http-nio-3000-exec-5] ERROR c.s.S.E.GlobalExceptionHandler - Runtime exception: Customer not found with ID: 1
+2026-03-12 17:00:33 [http-nio-3000-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.RuntimeException: Customer not found with ID: 1]
+2026-03-12 17:02:07 [http-nio-3000-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/customers
+2026-03-12 17:02:07 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:02:07 [http-nio-3000-exec-7] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:02:07 [http-nio-3000-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/customers
+2026-03-12 17:02:07 [http-nio-3000-exec-7] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerController.getAll(int,int); target is of class [com.sjmt.SJMT.Controller.CustomerController]
+2026-03-12 17:02:07 [http-nio-3000-exec-7] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerController.getAll(int,int); target is of class [com.sjmt.SJMT.Controller.CustomerController]
+2026-03-12 17:02:07 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-03-12 17:03:01 [http-nio-3000-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/customers
+2026-03-12 17:03:01 [http-nio-3000-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:03:02 [http-nio-3000-exec-8] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:03:02 [http-nio-3000-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/customers
+2026-03-12 17:03:02 [http-nio-3000-exec-8] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerController.create(com.sjmt.SJMT.DTO.RequestDTO.CustomerRequest); target is of class [com.sjmt.SJMT.Controller.CustomerController]
+2026-03-12 17:03:02 [http-nio-3000-exec-8] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerController.create(com.sjmt.SJMT.DTO.RequestDTO.CustomerRequest); target is of class [com.sjmt.SJMT.Controller.CustomerController]
+2026-03-12 17:03:02 [http-nio-3000-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_email=? 
+    fetch
+        first ? rows only
+2026-03-12 17:03:02 [http-nio-3000-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customers
+        (address, city, created_at, customer_email, customer_name, gst_number, phone_number, pincode, state, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:03:02 [http-nio-3000-exec-8] INFO  c.sjmt.SJMT.Service.CustomerService - New customer created: Test Customer
+2026-03-12 17:10:37 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/quotations
+2026-03-12 17:10:37 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:10:38 [http-nio-3000-exec-2] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:10:38 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/quotations
+2026-03-12 17:10:38 [http-nio-3000-exec-2] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.createQuotation(com.sjmt.SJMT.DTO.RequestDTO.CreateQuotationRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:10:38 [http-nio-3000-exec-2] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.createQuotation(com.sjmt.SJMT.DTO.RequestDTO.CreateQuotationRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:10:38 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:10:38 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(qe1_0.id) 
+    from
+        quotations qe1_0 
+    where
+        qe1_0.quotation_number like ? escape '\'
+2026-03-12 17:10:38 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        pme1_0.id,
+        pme1_0.average_purchase_rate,
+        pme1_0.category_id,
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.description,
+        c1_0.name,
+        c1_0.status,
+        c1_0.updated_at,
+        pme1_0.created_at,
+        pme1_0.current_stock,
+        pme1_0.hsn_code,
+        pme1_0.selling_rate,
+        pme1_0.status,
+        pme1_0.sub_category_id,
+        sc1_0.id,
+        sc1_0.category_id,
+        c2_0.id,
+        c2_0.created_at,
+        c2_0.description,
+        c2_0.name,
+        c2_0.status,
+        c2_0.updated_at,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.name,
+        sc1_0.status,
+        sc1_0.updated_at,
+        uom1_0.id,
+        uom1_0.abbreviation,
+        uom1_0.created_at,
+        uom1_0.description,
+        uom1_0.name,
+        uom1_0.status,
+        uom1_0.updated_at,
+        pme1_0.updated_at,
+        pme1_0.version 
+    from
+        product_master pme1_0 
+    join
+        categories c1_0 
+            on c1_0.id=pme1_0.category_id 
+    join
+        sub_categories sc1_0 
+            on sc1_0.id=pme1_0.sub_category_id 
+    join
+        categories c2_0 
+            on c2_0.id=sc1_0.category_id 
+    left join
+        unit_of_measurement uom1_0 
+            on uom1_0.id=pme1_0.unit_of_measurement_id 
+    where
+        pme1_0.id=?
+2026-03-12 17:10:38 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        quotations
+        (created_at, created_by, customer_id, customer_snapshot, is_interstate, notes, quotation_date, quotation_number, status, subtotal, terms, total_amount, total_cgst, total_discount, total_igst, total_sgst, updated_at, valid_until) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:10:39 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        quotation_items
+        (cgst_amount, description, discount_amount, discount_pct, gst_pct, hsn_code, igst_amount, line_total, product_master_id, quantity, quotation_id, sgst_amount, unit, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:10:39 [http-nio-3000-exec-2] INFO  c.sjmt.SJMT.Service.QuotationService - Quotation 20261 created by admin
+2026-03-12 17:12:33 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/quotations/1/status
+2026-03-12 17:12:33 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:12:33 [http-nio-3000-exec-4] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:12:33 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/quotations/1/status
+2026-03-12 17:12:33 [http-nio-3000-exec-4] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.changeStatus(java.lang.Integer,java.util.Map,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:12:33 [http-nio-3000-exec-4] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.changeStatus(java.lang.Integer,java.util.Map,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:12:33 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        qe1_0.id,
+        qe1_0.created_at,
+        qe1_0.created_by,
+        qe1_0.customer_id,
+        qe1_0.customer_snapshot,
+        qe1_0.is_interstate,
+        qe1_0.notes,
+        qe1_0.quotation_date,
+        qe1_0.quotation_number,
+        qe1_0.status,
+        qe1_0.subtotal,
+        qe1_0.terms,
+        qe1_0.total_amount,
+        qe1_0.total_cgst,
+        qe1_0.total_discount,
+        qe1_0.total_igst,
+        qe1_0.total_sgst,
+        qe1_0.updated_at,
+        qe1_0.valid_until 
+    from
+        quotations qe1_0 
+    where
+        qe1_0.id=?
+2026-03-12 17:12:33 [http-nio-3000-exec-4] INFO  c.sjmt.SJMT.Service.QuotationService - Quotation 20261 status changed to SENT by admin
+2026-03-12 17:12:33 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:12:34 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.quotation_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        quotation_items i1_0 
+    where
+        i1_0.quotation_id=?
+2026-03-12 17:12:34 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    update
+        quotations 
+    set
+        created_by=?,
+        customer_id=?,
+        customer_snapshot=?,
+        is_interstate=?,
+        notes=?,
+        quotation_date=?,
+        quotation_number=?,
+        status=?,
+        subtotal=?,
+        terms=?,
+        total_amount=?,
+        total_cgst=?,
+        total_discount=?,
+        total_igst=?,
+        total_sgst=?,
+        updated_at=?,
+        valid_until=? 
+    where
+        id=?
+2026-03-12 17:12:47 [http-nio-3000-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/quotations/1/status
+2026-03-12 17:12:47 [http-nio-3000-exec-5] ERROR com.sjmt.SJMT.Security.JwtUtil - JWT token is expired: JWT expired 8966 milliseconds ago at 2026-03-12T11:42:39.000Z. Current time: 2026-03-12T11:42:47.966Z. Allowed clock skew: 0 milliseconds.
+2026-03-12 17:12:47 [http-nio-3000-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-12 17:12:47 [http-nio-3000-exec-5] ERROR c.s.S.S.JwtAuthenticationEntryPoint - Unauthorized error: Full authentication is required to access this resource
+2026-03-12 17:12:58 [http-nio-3000-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/login
+2026-03-12 17:12:58 [http-nio-3000-exec-6] ERROR com.sjmt.SJMT.Security.JwtUtil - JWT token is expired: JWT expired 19178 milliseconds ago at 2026-03-12T11:42:39.000Z. Current time: 2026-03-12T11:42:58.178Z. Allowed clock skew: 0 milliseconds.
+2026-03-12 17:12:58 [http-nio-3000-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-12 17:12:58 [http-nio-3000-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/login
+2026-03-12 17:12:58 [http-nio-3000-exec-6] ERROR c.s.S.E.GlobalExceptionHandler - Validation error: {password=Password is required, username=Username or email is required}
+2026-03-12 17:12:58 [http-nio-3000-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.sjmt.SJMT.DTO.ResponseDTO.ApiResponse<com.sjmt.SJMT.DTO.ResponseDTO.AuthResponse>> com.sjmt.SJMT.Controller.AuthenticationController.login(com.sjmt.SJMT.DTO.RequestDTO.LoginRequest,jakarta.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'loginRequest' on field 'password': rejected value [null]; codes [NotBlank.loginRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password]]; default message [Password is required]] [Field error in object 'loginRequest' on field 'username': rejected value [null]; codes [NotBlank.loginRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.username,username]; arguments []; default message [username]]; default message [Username or email is required]] ]
+2026-03-12 17:13:30 [http-nio-3000-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/login
+2026-03-12 17:13:30 [http-nio-3000-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-12 17:13:30 [http-nio-3000-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/login
+2026-03-12 17:13:30 [http-nio-3000-exec-8] ERROR c.s.S.E.GlobalExceptionHandler - Runtime exception: JSON parse error: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value
+2026-03-12 17:13:30 [http-nio-3000-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in string value]
+2026-03-12 17:13:39 [http-nio-3000-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/login
+2026-03-12 17:13:39 [http-nio-3000-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-12 17:13:39 [http-nio-3000-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/login
+2026-03-12 17:13:39 [http-nio-3000-exec-10] INFO  c.s.S.C.AuthenticationController - Login request received for: admin
+2026-03-12 17:13:40 [http-nio-3000-exec-10] INFO  c.s.S.Service.AuthenticationService - Login attempt for: admin
+2026-03-12 17:13:40 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:13:40 [http-nio-3000-exec-10] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-03-12 17:13:40 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:13:41 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:13:41 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expiry_date, revoked, token, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 17:13:41 [http-nio-3000-exec-10] INFO  c.s.S.Service.AuthenticationService - User logged in successfully: admin
+2026-03-12 17:13:41 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        email=?,
+        email_verified=?,
+        full_name=?,
+        last_login=?,
+        password=?,
+        phone_number=?,
+        privileges=?,
+        role=?,
+        status=?,
+        temporary_password=?,
+        updated_at=?,
+        username=? 
+    where
+        user_id=?
+2026-03-12 17:14:25 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/quotations/1/staus
+2026-03-12 17:14:25 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:14:26 [http-nio-3000-exec-2] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:14:26 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/quotations/1/staus
+2026-03-12 17:14:26 [http-nio-3000-exec-2] ERROR c.s.S.E.GlobalExceptionHandler - Unexpected error: No static resource api/quotations/1/staus for request '/api/quotations/1/staus'.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/quotations/1/staus for request '/api/quotations/1/staus'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at com.sjmt.SJMT.Security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-03-12 17:14:26 [http-nio-3000-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/quotations/1/staus for request '/api/quotations/1/staus'.]
+2026-03-12 17:14:38 [http-nio-3000-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/quotations/1/staus
+2026-03-12 17:14:38 [http-nio-3000-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:14:39 [http-nio-3000-exec-3] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:14:39 [http-nio-3000-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/quotations/1/staus
+2026-03-12 17:14:39 [http-nio-3000-exec-3] ERROR c.s.S.E.GlobalExceptionHandler - Unexpected error: No static resource api/quotations/1/staus for request '/api/quotations/1/staus'.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/quotations/1/staus for request '/api/quotations/1/staus'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:877)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at com.sjmt.SJMT.Security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-03-12 17:14:39 [http-nio-3000-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/quotations/1/staus for request '/api/quotations/1/staus'.]
+2026-03-12 17:16:06 [http-nio-3000-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/quotations/1/status
+2026-03-12 17:16:06 [http-nio-3000-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:16:06 [http-nio-3000-exec-5] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:16:06 [http-nio-3000-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/quotations/1/status
+2026-03-12 17:16:06 [http-nio-3000-exec-5] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.changeStatus(java.lang.Integer,java.util.Map,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:16:06 [http-nio-3000-exec-5] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.changeStatus(java.lang.Integer,java.util.Map,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:16:06 [http-nio-3000-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        qe1_0.id,
+        qe1_0.created_at,
+        qe1_0.created_by,
+        qe1_0.customer_id,
+        qe1_0.customer_snapshot,
+        qe1_0.is_interstate,
+        qe1_0.notes,
+        qe1_0.quotation_date,
+        qe1_0.quotation_number,
+        qe1_0.status,
+        qe1_0.subtotal,
+        qe1_0.terms,
+        qe1_0.total_amount,
+        qe1_0.total_cgst,
+        qe1_0.total_discount,
+        qe1_0.total_igst,
+        qe1_0.total_sgst,
+        qe1_0.updated_at,
+        qe1_0.valid_until 
+    from
+        quotations qe1_0 
+    where
+        qe1_0.id=?
+2026-03-12 17:16:06 [http-nio-3000-exec-5] ERROR c.s.S.E.GlobalExceptionHandler - Runtime exception: Invalid status transition: SENT → SENT
+2026-03-12 17:16:06 [http-nio-3000-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalStateException: Invalid status transition: SENT → SENT]
+2026-03-12 17:16:25 [http-nio-3000-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/quotations/1/status
+2026-03-12 17:16:25 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:16:26 [http-nio-3000-exec-7] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:16:26 [http-nio-3000-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/quotations/1/status
+2026-03-12 17:16:26 [http-nio-3000-exec-7] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.changeStatus(java.lang.Integer,java.util.Map,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:16:26 [http-nio-3000-exec-7] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.changeStatus(java.lang.Integer,java.util.Map,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:16:26 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        qe1_0.id,
+        qe1_0.created_at,
+        qe1_0.created_by,
+        qe1_0.customer_id,
+        qe1_0.customer_snapshot,
+        qe1_0.is_interstate,
+        qe1_0.notes,
+        qe1_0.quotation_date,
+        qe1_0.quotation_number,
+        qe1_0.status,
+        qe1_0.subtotal,
+        qe1_0.terms,
+        qe1_0.total_amount,
+        qe1_0.total_cgst,
+        qe1_0.total_discount,
+        qe1_0.total_igst,
+        qe1_0.total_sgst,
+        qe1_0.updated_at,
+        qe1_0.valid_until 
+    from
+        quotations qe1_0 
+    where
+        qe1_0.id=?
+2026-03-12 17:16:26 [http-nio-3000-exec-7] ERROR c.s.S.E.GlobalExceptionHandler - Runtime exception: Invalid status transition: SENT → SENT
+2026-03-12 17:16:26 [http-nio-3000-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalStateException: Invalid status transition: SENT → SENT]
+2026-03-12 17:16:55 [http-nio-3000-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/quotations/1/status
+2026-03-12 17:16:55 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:16:56 [http-nio-3000-exec-9] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:16:56 [http-nio-3000-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/quotations/1/status
+2026-03-12 17:16:56 [http-nio-3000-exec-9] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.changeStatus(java.lang.Integer,java.util.Map,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:16:56 [http-nio-3000-exec-9] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.changeStatus(java.lang.Integer,java.util.Map,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-12 17:16:56 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        qe1_0.id,
+        qe1_0.created_at,
+        qe1_0.created_by,
+        qe1_0.customer_id,
+        qe1_0.customer_snapshot,
+        qe1_0.is_interstate,
+        qe1_0.notes,
+        qe1_0.quotation_date,
+        qe1_0.quotation_number,
+        qe1_0.status,
+        qe1_0.subtotal,
+        qe1_0.terms,
+        qe1_0.total_amount,
+        qe1_0.total_cgst,
+        qe1_0.total_discount,
+        qe1_0.total_igst,
+        qe1_0.total_sgst,
+        qe1_0.updated_at,
+        qe1_0.valid_until 
+    from
+        quotations qe1_0 
+    where
+        qe1_0.id=?
+2026-03-12 17:16:56 [http-nio-3000-exec-9] INFO  c.sjmt.SJMT.Service.QuotationService - Quotation 20261 status changed to ACCEPTED by admin
+2026-03-12 17:16:56 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:16:56 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.quotation_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        quotation_items i1_0 
+    where
+        i1_0.quotation_id=?
+2026-03-12 17:16:56 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    update
+        quotations 
+    set
+        created_by=?,
+        customer_id=?,
+        customer_snapshot=?,
+        is_interstate=?,
+        notes=?,
+        quotation_date=?,
+        quotation_number=?,
+        status=?,
+        subtotal=?,
+        terms=?,
+        total_amount=?,
+        total_cgst=?,
+        total_discount=?,
+        total_igst=?,
+        total_sgst=?,
+        updated_at=?,
+        valid_until=? 
+    where
+        id=?
+2026-03-12 17:19:06 [http-nio-3000-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/quotations/1/issue
+2026-03-12 17:19:06 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:19:06 [http-nio-3000-exec-1] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:19:06 [http-nio-3000-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/quotations/1/issue
+2026-03-12 17:19:06 [http-nio-3000-exec-1] ERROR c.s.S.E.GlobalExceptionHandler - Unexpected error: No static resource api/quotations/1/issue for request '/api/quotations/1/issue'.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/quotations/1/issue for request '/api/quotations/1/issue'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:877)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at com.sjmt.SJMT.Security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-03-12 17:19:06 [http-nio-3000-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/quotations/1/issue for request '/api/quotations/1/issue'.]
+2026-03-12 17:19:23 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/customer-bills/1/issue
+2026-03-12 17:19:23 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:19:24 [http-nio-3000-exec-4] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:19:24 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/customer-bills/1/issue
+2026-03-12 17:19:24 [http-nio-3000-exec-4] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.issueBill(java.lang.Integer,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:19:24 [http-nio-3000-exec-4] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.issueBill(java.lang.Integer,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:19:24 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        cbe1_0.id,
+        cbe1_0.balance_amount,
+        cbe1_0.bill_date,
+        cbe1_0.bill_number,
+        cbe1_0.created_at,
+        cbe1_0.created_by,
+        cbe1_0.customer_id,
+        cbe1_0.customer_snapshot,
+        cbe1_0.due_date,
+        cbe1_0.is_interstate,
+        cbe1_0.notes,
+        cbe1_0.paid_amount,
+        cbe1_0.payment_mode,
+        cbe1_0.payment_reference,
+        cbe1_0.quotation_id,
+        cbe1_0.status,
+        cbe1_0.stock_deducted,
+        cbe1_0.subtotal,
+        cbe1_0.terms,
+        cbe1_0.total_amount,
+        cbe1_0.total_cgst,
+        cbe1_0.total_discount,
+        cbe1_0.total_igst,
+        cbe1_0.total_sgst,
+        cbe1_0.updated_at 
+    from
+        customer_bills cbe1_0 
+    where
+        cbe1_0.id=?
+2026-03-12 17:19:25 [http-nio-3000-exec-4] ERROR c.s.S.E.GlobalExceptionHandler - Runtime exception: Bill not found with ID: 1
+2026-03-12 17:19:25 [http-nio-3000-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.RuntimeException: Bill not found with ID: 1]
+2026-03-12 17:20:00 [http-nio-3000-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/customer-bills
+2026-03-12 17:20:00 [http-nio-3000-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:20:00 [http-nio-3000-exec-6] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:20:00 [http-nio-3000-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/customer-bills
+2026-03-12 17:20:00 [http-nio-3000-exec-6] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.getAllBills(int,int,com.sjmt.SJMT.Entity.BillStatus,java.lang.Integer); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:20:00 [http-nio-3000-exec-6] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.getAllBills(int,int,com.sjmt.SJMT.Entity.BillStatus,java.lang.Integer); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:20:00 [http-nio-3000-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        cbe1_0.id,
+        cbe1_0.balance_amount,
+        cbe1_0.bill_date,
+        cbe1_0.bill_number,
+        cbe1_0.created_at,
+        cbe1_0.created_by,
+        cbe1_0.customer_id,
+        cbe1_0.customer_snapshot,
+        cbe1_0.due_date,
+        cbe1_0.is_interstate,
+        cbe1_0.notes,
+        cbe1_0.paid_amount,
+        cbe1_0.payment_mode,
+        cbe1_0.payment_reference,
+        cbe1_0.quotation_id,
+        cbe1_0.status,
+        cbe1_0.stock_deducted,
+        cbe1_0.subtotal,
+        cbe1_0.terms,
+        cbe1_0.total_amount,
+        cbe1_0.total_cgst,
+        cbe1_0.total_discount,
+        cbe1_0.total_igst,
+        cbe1_0.total_sgst,
+        cbe1_0.updated_at 
+    from
+        customer_bills cbe1_0 
+    order by
+        cbe1_0.created_at desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-03-12 17:20:00 [http-nio-3000-exec-6] WARN  o.s.d.w.c.SpringDataJackson3Configuration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-03-12 17:21:26 [http-nio-3000-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/customer-bills
+2026-03-12 17:21:26 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:21:27 [http-nio-3000-exec-9] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:21:27 [http-nio-3000-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/customer-bills
+2026-03-12 17:21:27 [http-nio-3000-exec-9] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.createBill(com.sjmt.SJMT.DTO.RequestDTO.CreateCustomerBillRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:21:27 [http-nio-3000-exec-9] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.createBill(com.sjmt.SJMT.DTO.RequestDTO.CreateCustomerBillRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:21:27 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:21:27 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(cbe1_0.id) 
+    from
+        customer_bills cbe1_0 
+    where
+        cbe1_0.bill_number like ? escape '\'
+2026-03-12 17:21:27 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        pme1_0.id,
+        pme1_0.average_purchase_rate,
+        pme1_0.category_id,
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.description,
+        c1_0.name,
+        c1_0.status,
+        c1_0.updated_at,
+        pme1_0.created_at,
+        pme1_0.current_stock,
+        pme1_0.hsn_code,
+        pme1_0.selling_rate,
+        pme1_0.status,
+        pme1_0.sub_category_id,
+        sc1_0.id,
+        sc1_0.category_id,
+        c2_0.id,
+        c2_0.created_at,
+        c2_0.description,
+        c2_0.name,
+        c2_0.status,
+        c2_0.updated_at,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.name,
+        sc1_0.status,
+        sc1_0.updated_at,
+        uom1_0.id,
+        uom1_0.abbreviation,
+        uom1_0.created_at,
+        uom1_0.description,
+        uom1_0.name,
+        uom1_0.status,
+        uom1_0.updated_at,
+        pme1_0.updated_at,
+        pme1_0.version 
+    from
+        product_master pme1_0 
+    join
+        categories c1_0 
+            on c1_0.id=pme1_0.category_id 
+    join
+        sub_categories sc1_0 
+            on sc1_0.id=pme1_0.sub_category_id 
+    join
+        categories c2_0 
+            on c2_0.id=sc1_0.category_id 
+    left join
+        unit_of_measurement uom1_0 
+            on uom1_0.id=pme1_0.unit_of_measurement_id 
+    where
+        pme1_0.id=?
+2026-03-12 17:21:27 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customer_bills
+        (balance_amount, bill_date, bill_number, created_at, created_by, customer_id, customer_snapshot, due_date, is_interstate, notes, paid_amount, payment_mode, payment_reference, quotation_id, status, stock_deducted, subtotal, terms, total_amount, total_cgst, total_discount, total_igst, total_sgst, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:21:27 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customer_bill_items
+        (bill_id, cgst_amount, description, discount_amount, discount_pct, gst_pct, hsn_code, igst_amount, line_total, product_master_id, quantity, sgst_amount, unit, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:21:27 [http-nio-3000-exec-9] INFO  c.s.SJMT.Service.CustomerBillService - Bill 20261 created (DRAFT) by admin
+2026-03-12 17:24:38 [http-nio-3000-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/customer-bills/1/issue
+2026-03-12 17:24:38 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:24:39 [http-nio-3000-exec-1] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:24:39 [http-nio-3000-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/customer-bills/1/issue
+2026-03-12 17:24:39 [http-nio-3000-exec-1] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.issueBill(java.lang.Integer,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:24:39 [http-nio-3000-exec-1] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.issueBill(java.lang.Integer,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:24:39 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        cbe1_0.id,
+        cbe1_0.balance_amount,
+        cbe1_0.bill_date,
+        cbe1_0.bill_number,
+        cbe1_0.created_at,
+        cbe1_0.created_by,
+        cbe1_0.customer_id,
+        cbe1_0.customer_snapshot,
+        cbe1_0.due_date,
+        cbe1_0.is_interstate,
+        cbe1_0.notes,
+        cbe1_0.paid_amount,
+        cbe1_0.payment_mode,
+        cbe1_0.payment_reference,
+        cbe1_0.quotation_id,
+        cbe1_0.status,
+        cbe1_0.stock_deducted,
+        cbe1_0.subtotal,
+        cbe1_0.terms,
+        cbe1_0.total_amount,
+        cbe1_0.total_cgst,
+        cbe1_0.total_discount,
+        cbe1_0.total_igst,
+        cbe1_0.total_sgst,
+        cbe1_0.updated_at 
+    from
+        customer_bills cbe1_0 
+    where
+        cbe1_0.id=?
+2026-03-12 17:24:39 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.bill_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        customer_bill_items i1_0 
+    where
+        i1_0.bill_id=?
+2026-03-12 17:24:39 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:24:39 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        pme1_0.id,
+        pme1_0.average_purchase_rate,
+        pme1_0.category_id,
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.description,
+        c1_0.name,
+        c1_0.status,
+        c1_0.updated_at,
+        pme1_0.created_at,
+        pme1_0.current_stock,
+        pme1_0.hsn_code,
+        pme1_0.selling_rate,
+        pme1_0.status,
+        pme1_0.sub_category_id,
+        sc1_0.id,
+        sc1_0.category_id,
+        c2_0.id,
+        c2_0.created_at,
+        c2_0.description,
+        c2_0.name,
+        c2_0.status,
+        c2_0.updated_at,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.name,
+        sc1_0.status,
+        sc1_0.updated_at,
+        uom1_0.id,
+        uom1_0.abbreviation,
+        uom1_0.created_at,
+        uom1_0.description,
+        uom1_0.name,
+        uom1_0.status,
+        uom1_0.updated_at,
+        pme1_0.updated_at,
+        pme1_0.version 
+    from
+        product_master pme1_0 
+    join
+        categories c1_0 
+            on c1_0.id=pme1_0.category_id 
+    join
+        sub_categories sc1_0 
+            on sc1_0.id=pme1_0.sub_category_id 
+    join
+        categories c2_0 
+            on c2_0.id=sc1_0.category_id 
+    left join
+        unit_of_measurement uom1_0 
+            on uom1_0.id=pme1_0.unit_of_measurement_id 
+    where
+        pme1_0.id=?
+2026-03-12 17:24:40 [http-nio-3000-exec-1] INFO  com.sjmt.SJMT.Service.StockService - Stock deducted — product ID 6: -10.000 → remaining 90.000
+2026-03-12 17:24:40 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        sales
+        (created_at, customer_name, notes, product_master_id, quantity, recorded_by, sale_date, selling_rate, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:24:41 [http-nio-3000-exec-1] INFO  com.sjmt.SJMT.Service.SaleService - Sale recorded — ID 1 | product 'Steel/8MM550D' | qty 10.000 | by admin
+2026-03-12 17:24:41 [http-nio-3000-exec-1] INFO  c.s.SJMT.Service.CustomerBillService - Bill 20261 ISSUED by admin — stock deducted for 1 item(s)
+2026-03-12 17:24:41 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    update
+        customer_bills 
+    set
+        balance_amount=?,
+        bill_date=?,
+        bill_number=?,
+        created_by=?,
+        customer_id=?,
+        customer_snapshot=?,
+        due_date=?,
+        is_interstate=?,
+        notes=?,
+        paid_amount=?,
+        payment_mode=?,
+        payment_reference=?,
+        quotation_id=?,
+        status=?,
+        stock_deducted=?,
+        subtotal=?,
+        terms=?,
+        total_amount=?,
+        total_cgst=?,
+        total_discount=?,
+        total_igst=?,
+        total_sgst=?,
+        updated_at=? 
+    where
+        id=?
+2026-03-12 17:24:42 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    update
+        product_master 
+    set
+        average_purchase_rate=?,
+        category_id=?,
+        current_stock=?,
+        hsn_code=?,
+        selling_rate=?,
+        status=?,
+        sub_category_id=?,
+        unit_of_measurement_id=?,
+        updated_at=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+2026-03-12 17:28:22 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2a62b828 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 17:29:14 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1274413 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 17:29:36 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@429f0733 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-12 17:30:24 [http-nio-3000-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/customer-bills/1/payment
+2026-03-12 17:30:24 [http-nio-3000-exec-5] ERROR com.sjmt.SJMT.Security.JwtUtil - JWT token is expired: JWT expired 103435 milliseconds ago at 2026-03-12T11:58:41.000Z. Current time: 2026-03-12T12:00:24.435Z. Allowed clock skew: 0 milliseconds.
+2026-03-12 17:30:24 [http-nio-3000-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-12 17:30:24 [http-nio-3000-exec-5] ERROR c.s.S.S.JwtAuthenticationEntryPoint - Unauthorized error: Full authentication is required to access this resource
+2026-03-12 17:30:50 [http-nio-3000-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/login
+2026-03-12 17:30:50 [http-nio-3000-exec-6] ERROR com.sjmt.SJMT.Security.JwtUtil - JWT token is expired: JWT expired 129837 milliseconds ago at 2026-03-12T11:58:41.000Z. Current time: 2026-03-12T12:00:50.837Z. Allowed clock skew: 0 milliseconds.
+2026-03-12 17:30:50 [http-nio-3000-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-12 17:30:50 [http-nio-3000-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/login
+2026-03-12 17:30:50 [http-nio-3000-exec-6] INFO  c.s.S.C.AuthenticationController - Login request received for: admin
+2026-03-12 17:30:50 [http-nio-3000-exec-6] INFO  c.s.S.Service.AuthenticationService - Login attempt for: admin
+2026-03-12 17:30:50 [http-nio-3000-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:30:51 [http-nio-3000-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-03-12 17:30:51 [http-nio-3000-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:30:51 [http-nio-3000-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:30:51 [http-nio-3000-exec-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expiry_date, revoked, token, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 17:30:51 [http-nio-3000-exec-6] INFO  c.s.S.Service.AuthenticationService - User logged in successfully: admin
+2026-03-12 17:30:51 [http-nio-3000-exec-6] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        email=?,
+        email_verified=?,
+        full_name=?,
+        last_login=?,
+        password=?,
+        phone_number=?,
+        privileges=?,
+        role=?,
+        status=?,
+        temporary_password=?,
+        updated_at=?,
+        username=? 
+    where
+        user_id=?
+2026-03-12 17:31:34 [http-nio-3000-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/customer-bills/1/payment
+2026-03-12 17:31:34 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:31:35 [http-nio-3000-exec-7] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:31:35 [http-nio-3000-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/customer-bills/1/payment
+2026-03-12 17:31:35 [http-nio-3000-exec-7] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.recordPayment(java.lang.Integer,com.sjmt.SJMT.DTO.RequestDTO.RecordPaymentRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:31:35 [http-nio-3000-exec-7] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.recordPayment(java.lang.Integer,com.sjmt.SJMT.DTO.RequestDTO.RecordPaymentRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:31:35 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        cbe1_0.id,
+        cbe1_0.balance_amount,
+        cbe1_0.bill_date,
+        cbe1_0.bill_number,
+        cbe1_0.created_at,
+        cbe1_0.created_by,
+        cbe1_0.customer_id,
+        cbe1_0.customer_snapshot,
+        cbe1_0.due_date,
+        cbe1_0.is_interstate,
+        cbe1_0.notes,
+        cbe1_0.paid_amount,
+        cbe1_0.payment_mode,
+        cbe1_0.payment_reference,
+        cbe1_0.quotation_id,
+        cbe1_0.status,
+        cbe1_0.stock_deducted,
+        cbe1_0.subtotal,
+        cbe1_0.terms,
+        cbe1_0.total_amount,
+        cbe1_0.total_cgst,
+        cbe1_0.total_discount,
+        cbe1_0.total_igst,
+        cbe1_0.total_sgst,
+        cbe1_0.updated_at 
+    from
+        customer_bills cbe1_0 
+    where
+        cbe1_0.id=?
+2026-03-12 17:31:35 [http-nio-3000-exec-7] INFO  c.s.SJMT.Service.CustomerBillService - Payment ₹1000 recorded on Bill 20261 by admin — new balance: ₹1360.00
+2026-03-12 17:31:35 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:31:35 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.bill_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        customer_bill_items i1_0 
+    where
+        i1_0.bill_id=?
+2026-03-12 17:31:35 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    update
+        customer_bills 
+    set
+        balance_amount=?,
+        bill_date=?,
+        bill_number=?,
+        created_by=?,
+        customer_id=?,
+        customer_snapshot=?,
+        due_date=?,
+        is_interstate=?,
+        notes=?,
+        paid_amount=?,
+        payment_mode=?,
+        payment_reference=?,
+        quotation_id=?,
+        status=?,
+        stock_deducted=?,
+        subtotal=?,
+        terms=?,
+        total_amount=?,
+        total_cgst=?,
+        total_discount=?,
+        total_igst=?,
+        total_sgst=?,
+        updated_at=? 
+    where
+        id=?
+2026-03-12 17:32:21 [http-nio-3000-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/customer-bills/1/payment
+2026-03-12 17:32:21 [http-nio-3000-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:32:21 [http-nio-3000-exec-8] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:32:21 [http-nio-3000-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/customer-bills/1/payment
+2026-03-12 17:32:21 [http-nio-3000-exec-8] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.recordPayment(java.lang.Integer,com.sjmt.SJMT.DTO.RequestDTO.RecordPaymentRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:32:21 [http-nio-3000-exec-8] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.recordPayment(java.lang.Integer,com.sjmt.SJMT.DTO.RequestDTO.RecordPaymentRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:32:21 [http-nio-3000-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        cbe1_0.id,
+        cbe1_0.balance_amount,
+        cbe1_0.bill_date,
+        cbe1_0.bill_number,
+        cbe1_0.created_at,
+        cbe1_0.created_by,
+        cbe1_0.customer_id,
+        cbe1_0.customer_snapshot,
+        cbe1_0.due_date,
+        cbe1_0.is_interstate,
+        cbe1_0.notes,
+        cbe1_0.paid_amount,
+        cbe1_0.payment_mode,
+        cbe1_0.payment_reference,
+        cbe1_0.quotation_id,
+        cbe1_0.status,
+        cbe1_0.stock_deducted,
+        cbe1_0.subtotal,
+        cbe1_0.terms,
+        cbe1_0.total_amount,
+        cbe1_0.total_cgst,
+        cbe1_0.total_discount,
+        cbe1_0.total_igst,
+        cbe1_0.total_sgst,
+        cbe1_0.updated_at 
+    from
+        customer_bills cbe1_0 
+    where
+        cbe1_0.id=?
+2026-03-12 17:32:22 [http-nio-3000-exec-8] INFO  c.s.SJMT.Service.CustomerBillService - Payment ₹1360 recorded on Bill 20261 by admin — new balance: ₹0.00
+2026-03-12 17:32:22 [http-nio-3000-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:32:22 [http-nio-3000-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.bill_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        customer_bill_items i1_0 
+    where
+        i1_0.bill_id=?
+2026-03-12 17:32:22 [http-nio-3000-exec-8] DEBUG org.hibernate.SQL - 
+    update
+        customer_bills 
+    set
+        balance_amount=?,
+        bill_date=?,
+        bill_number=?,
+        created_by=?,
+        customer_id=?,
+        customer_snapshot=?,
+        due_date=?,
+        is_interstate=?,
+        notes=?,
+        paid_amount=?,
+        payment_mode=?,
+        payment_reference=?,
+        quotation_id=?,
+        status=?,
+        stock_deducted=?,
+        subtotal=?,
+        terms=?,
+        total_amount=?,
+        total_cgst=?,
+        total_discount=?,
+        total_igst=?,
+        total_sgst=?,
+        updated_at=? 
+    where
+        id=?
+2026-03-12 17:33:17 [http-nio-3000-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/customer-bills
+2026-03-12 17:33:17 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:33:18 [http-nio-3000-exec-9] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:33:18 [http-nio-3000-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/customer-bills
+2026-03-12 17:33:18 [http-nio-3000-exec-9] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.createBill(com.sjmt.SJMT.DTO.RequestDTO.CreateCustomerBillRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:33:18 [http-nio-3000-exec-9] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.createBill(com.sjmt.SJMT.DTO.RequestDTO.CreateCustomerBillRequest,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:33:18 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:33:18 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(cbe1_0.id) 
+    from
+        customer_bills cbe1_0 
+    where
+        cbe1_0.bill_number like ? escape '\'
+2026-03-12 17:33:18 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        pme1_0.id,
+        pme1_0.average_purchase_rate,
+        pme1_0.category_id,
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.description,
+        c1_0.name,
+        c1_0.status,
+        c1_0.updated_at,
+        pme1_0.created_at,
+        pme1_0.current_stock,
+        pme1_0.hsn_code,
+        pme1_0.selling_rate,
+        pme1_0.status,
+        pme1_0.sub_category_id,
+        sc1_0.id,
+        sc1_0.category_id,
+        c2_0.id,
+        c2_0.created_at,
+        c2_0.description,
+        c2_0.name,
+        c2_0.status,
+        c2_0.updated_at,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.name,
+        sc1_0.status,
+        sc1_0.updated_at,
+        uom1_0.id,
+        uom1_0.abbreviation,
+        uom1_0.created_at,
+        uom1_0.description,
+        uom1_0.name,
+        uom1_0.status,
+        uom1_0.updated_at,
+        pme1_0.updated_at,
+        pme1_0.version 
+    from
+        product_master pme1_0 
+    join
+        categories c1_0 
+            on c1_0.id=pme1_0.category_id 
+    join
+        sub_categories sc1_0 
+            on sc1_0.id=pme1_0.sub_category_id 
+    join
+        categories c2_0 
+            on c2_0.id=sc1_0.category_id 
+    left join
+        unit_of_measurement uom1_0 
+            on uom1_0.id=pme1_0.unit_of_measurement_id 
+    where
+        pme1_0.id=?
+2026-03-12 17:33:18 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customer_bills
+        (balance_amount, bill_date, bill_number, created_at, created_by, customer_id, customer_snapshot, due_date, is_interstate, notes, paid_amount, payment_mode, payment_reference, quotation_id, status, stock_deducted, subtotal, terms, total_amount, total_cgst, total_discount, total_igst, total_sgst, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:33:18 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customer_bill_items
+        (bill_id, cgst_amount, description, discount_amount, discount_pct, gst_pct, hsn_code, igst_amount, line_total, product_master_id, quantity, sgst_amount, unit, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:33:19 [http-nio-3000-exec-9] INFO  c.s.SJMT.Service.CustomerBillService - Bill 20262 created (DRAFT) by admin
+2026-03-12 17:34:15 [http-nio-3000-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/customer-bills/2/issue
+2026-03-12 17:34:15 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/customer-bills/2/issue
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.issueBill(java.lang.Integer,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.issueBill(java.lang.Integer,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        cbe1_0.id,
+        cbe1_0.balance_amount,
+        cbe1_0.bill_date,
+        cbe1_0.bill_number,
+        cbe1_0.created_at,
+        cbe1_0.created_by,
+        cbe1_0.customer_id,
+        cbe1_0.customer_snapshot,
+        cbe1_0.due_date,
+        cbe1_0.is_interstate,
+        cbe1_0.notes,
+        cbe1_0.paid_amount,
+        cbe1_0.payment_mode,
+        cbe1_0.payment_reference,
+        cbe1_0.quotation_id,
+        cbe1_0.status,
+        cbe1_0.stock_deducted,
+        cbe1_0.subtotal,
+        cbe1_0.terms,
+        cbe1_0.total_amount,
+        cbe1_0.total_cgst,
+        cbe1_0.total_discount,
+        cbe1_0.total_igst,
+        cbe1_0.total_sgst,
+        cbe1_0.updated_at 
+    from
+        customer_bills cbe1_0 
+    where
+        cbe1_0.id=?
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.bill_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        customer_bill_items i1_0 
+    where
+        i1_0.bill_id=?
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        pme1_0.id,
+        pme1_0.average_purchase_rate,
+        pme1_0.category_id,
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.description,
+        c1_0.name,
+        c1_0.status,
+        c1_0.updated_at,
+        pme1_0.created_at,
+        pme1_0.current_stock,
+        pme1_0.hsn_code,
+        pme1_0.selling_rate,
+        pme1_0.status,
+        pme1_0.sub_category_id,
+        sc1_0.id,
+        sc1_0.category_id,
+        c2_0.id,
+        c2_0.created_at,
+        c2_0.description,
+        c2_0.name,
+        c2_0.status,
+        c2_0.updated_at,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.name,
+        sc1_0.status,
+        sc1_0.updated_at,
+        uom1_0.id,
+        uom1_0.abbreviation,
+        uom1_0.created_at,
+        uom1_0.description,
+        uom1_0.name,
+        uom1_0.status,
+        uom1_0.updated_at,
+        pme1_0.updated_at,
+        pme1_0.version 
+    from
+        product_master pme1_0 
+    join
+        categories c1_0 
+            on c1_0.id=pme1_0.category_id 
+    join
+        sub_categories sc1_0 
+            on sc1_0.id=pme1_0.sub_category_id 
+    join
+        categories c2_0 
+            on c2_0.id=sc1_0.category_id 
+    left join
+        unit_of_measurement uom1_0 
+            on uom1_0.id=pme1_0.unit_of_measurement_id 
+    where
+        pme1_0.id=?
+2026-03-12 17:34:16 [http-nio-3000-exec-10] INFO  com.sjmt.SJMT.Service.StockService - Stock deducted — product ID 6: -5.000 → remaining 85.000
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        sales
+        (created_at, customer_name, notes, product_master_id, quantity, recorded_by, sale_date, selling_rate, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:34:16 [http-nio-3000-exec-10] INFO  com.sjmt.SJMT.Service.SaleService - Sale recorded — ID 2 | product 'Steel/8MM550D' | qty 5.000 | by admin
+2026-03-12 17:34:16 [http-nio-3000-exec-10] INFO  c.s.SJMT.Service.CustomerBillService - Bill 20262 ISSUED by admin — stock deducted for 1 item(s)
+2026-03-12 17:34:16 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    update
+        customer_bills 
+    set
+        balance_amount=?,
+        bill_date=?,
+        bill_number=?,
+        created_by=?,
+        customer_id=?,
+        customer_snapshot=?,
+        due_date=?,
+        is_interstate=?,
+        notes=?,
+        paid_amount=?,
+        payment_mode=?,
+        payment_reference=?,
+        quotation_id=?,
+        status=?,
+        stock_deducted=?,
+        subtotal=?,
+        terms=?,
+        total_amount=?,
+        total_cgst=?,
+        total_discount=?,
+        total_igst=?,
+        total_sgst=?,
+        updated_at=? 
+    where
+        id=?
+2026-03-12 17:34:17 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    update
+        product_master 
+    set
+        average_purchase_rate=?,
+        category_id=?,
+        current_stock=?,
+        hsn_code=?,
+        selling_rate=?,
+        status=?,
+        sub_category_id=?,
+        unit_of_measurement_id=?,
+        updated_at=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+2026-03-12 17:34:55 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing PATCH /api/customer-bills/2/cancel
+2026-03-12 17:34:55 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:34:55 [http-nio-3000-exec-2] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:34:55 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured PATCH /api/customer-bills/2/cancel
+2026-03-12 17:34:55 [http-nio-3000-exec-2] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.cancelBill(java.lang.Integer,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:34:55 [http-nio-3000-exec-2] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.cancelBill(java.lang.Integer,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:34:55 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        cbe1_0.id,
+        cbe1_0.balance_amount,
+        cbe1_0.bill_date,
+        cbe1_0.bill_number,
+        cbe1_0.created_at,
+        cbe1_0.created_by,
+        cbe1_0.customer_id,
+        cbe1_0.customer_snapshot,
+        cbe1_0.due_date,
+        cbe1_0.is_interstate,
+        cbe1_0.notes,
+        cbe1_0.paid_amount,
+        cbe1_0.payment_mode,
+        cbe1_0.payment_reference,
+        cbe1_0.quotation_id,
+        cbe1_0.status,
+        cbe1_0.stock_deducted,
+        cbe1_0.subtotal,
+        cbe1_0.terms,
+        cbe1_0.total_amount,
+        cbe1_0.total_cgst,
+        cbe1_0.total_discount,
+        cbe1_0.total_igst,
+        cbe1_0.total_sgst,
+        cbe1_0.updated_at 
+    from
+        customer_bills cbe1_0 
+    where
+        cbe1_0.id=?
+2026-03-12 17:34:56 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.bill_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        customer_bill_items i1_0 
+    where
+        i1_0.bill_id=?
+2026-03-12 17:34:56 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        pme1_0.id,
+        pme1_0.average_purchase_rate,
+        pme1_0.category_id,
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.description,
+        c1_0.name,
+        c1_0.status,
+        c1_0.updated_at,
+        pme1_0.created_at,
+        pme1_0.current_stock,
+        pme1_0.hsn_code,
+        pme1_0.selling_rate,
+        pme1_0.status,
+        pme1_0.sub_category_id,
+        sc1_0.id,
+        sc1_0.category_id,
+        c2_0.id,
+        c2_0.created_at,
+        c2_0.description,
+        c2_0.name,
+        c2_0.status,
+        c2_0.updated_at,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.name,
+        sc1_0.status,
+        sc1_0.updated_at,
+        uom1_0.id,
+        uom1_0.abbreviation,
+        uom1_0.created_at,
+        uom1_0.description,
+        uom1_0.name,
+        uom1_0.status,
+        uom1_0.updated_at,
+        pme1_0.updated_at,
+        pme1_0.version 
+    from
+        product_master pme1_0 
+    join
+        categories c1_0 
+            on c1_0.id=pme1_0.category_id 
+    join
+        sub_categories sc1_0 
+            on sc1_0.id=pme1_0.sub_category_id 
+    join
+        categories c2_0 
+            on c2_0.id=sc1_0.category_id 
+    left join
+        unit_of_measurement uom1_0 
+            on uom1_0.id=pme1_0.unit_of_measurement_id 
+    where
+        pme1_0.id=?
+2026-03-12 17:34:56 [http-nio-3000-exec-2] INFO  c.s.SJMT.Service.CustomerBillService - Stock restored for product 6 due to bill 20262 cancellation: +5.000
+2026-03-12 17:34:56 [http-nio-3000-exec-2] INFO  c.s.SJMT.Service.CustomerBillService - Bill 20262 CANCELLED by admin
+2026-03-12 17:34:56 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:34:56 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    update
+        customer_bills 
+    set
+        balance_amount=?,
+        bill_date=?,
+        bill_number=?,
+        created_by=?,
+        customer_id=?,
+        customer_snapshot=?,
+        due_date=?,
+        is_interstate=?,
+        notes=?,
+        paid_amount=?,
+        payment_mode=?,
+        payment_reference=?,
+        quotation_id=?,
+        status=?,
+        stock_deducted=?,
+        subtotal=?,
+        terms=?,
+        total_amount=?,
+        total_cgst=?,
+        total_discount=?,
+        total_igst=?,
+        total_sgst=?,
+        updated_at=? 
+    where
+        id=?
+2026-03-12 17:34:56 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    update
+        product_master 
+    set
+        average_purchase_rate=?,
+        category_id=?,
+        current_stock=?,
+        hsn_code=?,
+        selling_rate=?,
+        status=?,
+        sub_category_id=?,
+        unit_of_measurement_id=?,
+        updated_at=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+2026-03-12 17:36:47 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/customer-bills/from-quotation/1?billDate=2026-03-12&dueDate=2026-04-12
+2026-03-12 17:36:47 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-12 17:36:47 [http-nio-3000-exec-4] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-12 17:36:47 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/customer-bills/from-quotation/1?billDate=2026-03-12&dueDate=2026-04-12
+2026-03-12 17:36:47 [http-nio-3000-exec-4] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.convertFromQuotation(java.lang.Integer,java.time.LocalDate,java.time.LocalDate,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:36:47 [http-nio-3000-exec-4] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.convertFromQuotation(java.lang.Integer,java.time.LocalDate,java.time.LocalDate,java.security.Principal); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-12 17:36:47 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        qe1_0.id,
+        qe1_0.created_at,
+        qe1_0.created_by,
+        qe1_0.customer_id,
+        qe1_0.customer_snapshot,
+        qe1_0.is_interstate,
+        qe1_0.notes,
+        qe1_0.quotation_date,
+        qe1_0.quotation_number,
+        qe1_0.status,
+        qe1_0.subtotal,
+        qe1_0.terms,
+        qe1_0.total_amount,
+        qe1_0.total_cgst,
+        qe1_0.total_discount,
+        qe1_0.total_igst,
+        qe1_0.total_sgst,
+        qe1_0.updated_at,
+        qe1_0.valid_until 
+    from
+        quotations qe1_0 
+    where
+        qe1_0.id=?
+2026-03-12 17:36:47 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        count(cbe1_0.id) 
+    from
+        customer_bills cbe1_0 
+    where
+        cbe1_0.bill_number like ? escape '\'
+2026-03-12 17:36:48 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.quotation_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        quotation_items i1_0 
+    where
+        i1_0.quotation_id=?
+2026-03-12 17:36:48 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customer_bills
+        (balance_amount, bill_date, bill_number, created_at, created_by, customer_id, customer_snapshot, due_date, is_interstate, notes, paid_amount, payment_mode, payment_reference, quotation_id, status, stock_deducted, subtotal, terms, total_amount, total_cgst, total_discount, total_igst, total_sgst, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:36:48 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        customer_bill_items
+        (bill_id, cgst_amount, description, discount_amount, discount_pct, gst_pct, hsn_code, igst_amount, line_total, product_master_id, quantity, sgst_amount, unit, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-03-12 17:36:48 [http-nio-3000-exec-4] INFO  c.s.SJMT.Service.CustomerBillService - Bill 20263 created from Quotation 20261 by admin
+2026-03-12 17:36:48 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-12 17:36:48 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    update
+        quotations 
+    set
+        created_by=?,
+        customer_id=?,
+        customer_snapshot=?,
+        is_interstate=?,
+        notes=?,
+        quotation_date=?,
+        quotation_number=?,
+        status=?,
+        subtotal=?,
+        terms=?,
+        total_amount=?,
+        total_cgst=?,
+        total_discount=?,
+        total_igst=?,
+        total_sgst=?,
+        updated_at=?,
+        valid_until=? 
+    where
+        id=?
