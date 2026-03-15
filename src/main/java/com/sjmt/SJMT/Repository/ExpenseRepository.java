@@ -62,33 +62,41 @@ public interface ExpenseRepository extends JpaRepository<ExpenseEntity, Integer>
         @Param("toDate") LocalDate toDate
     );
 
-    // GST input credit report
+    // GST input credit report — COALESCE prevents NULL when no matching rows
     @Query("""
         SELECT
-            SUM(e.cgstAmount),
-            SUM(e.sgstAmount),
-            SUM(e.igstAmount)
+            COALESCE(SUM(e.cgstAmount), 0),
+            COALESCE(SUM(e.sgstAmount), 0),
+            COALESCE(SUM(e.igstAmount), 0)
         FROM ExpenseEntity e
         WHERE e.status = 'ACTIVE'
           AND e.isGstApplicable = true
           AND e.expenseDate BETWEEN :fromDate AND :toDate
     """)
-    Object[] gstInputCreditReport(
+    List<Object[]> gstInputCreditReport(
         @Param("fromDate") LocalDate fromDate,
         @Param("toDate") LocalDate toDate
     );
 
-    // Payment mode breakdown
+    // Payment mode breakdown — with date range
     @Query("""
         SELECT e.paymentMode, SUM(e.totalAmount)
         FROM ExpenseEntity e
         WHERE e.status = 'ACTIVE'
-          AND (:fromDate IS NULL OR e.expenseDate >= :fromDate)
-          AND (:toDate IS NULL OR e.expenseDate <= :toDate)
+          AND e.expenseDate BETWEEN :fromDate AND :toDate
         GROUP BY e.paymentMode
     """)
-    List<Object[]> paymentModeBreakdown(
+    List<Object[]> paymentModeBreakdownByRange(
         @Param("fromDate") LocalDate fromDate,
         @Param("toDate") LocalDate toDate
     );
+
+    // Payment mode breakdown — all time (no date filter)
+    @Query("""
+        SELECT e.paymentMode, SUM(e.totalAmount)
+        FROM ExpenseEntity e
+        WHERE e.status = 'ACTIVE'
+        GROUP BY e.paymentMode
+    """)
+    List<Object[]> paymentModeBreakdownAll();
 }

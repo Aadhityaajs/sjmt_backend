@@ -110,28 +110,42 @@ public class ExpenseService {
     }
 
     public Map<String, Object> getGstInputCreditReport(LocalDate fromDate, LocalDate toDate) {
-        Object[] result = expenseRepository.gstInputCreditReport(fromDate, toDate);
+        List<Object[]> rows = expenseRepository.gstInputCreditReport(fromDate, toDate);
+        Object[] result = rows.isEmpty() ? null : rows.get(0);
         Map<String, Object> map = new HashMap<>();
-        map.put("totalCgst", result[0] != null ? result[0] : BigDecimal.ZERO);
-        map.put("totalSgst", result[1] != null ? result[1] : BigDecimal.ZERO);
-        map.put("totalIgst", result[2] != null ? result[2] : BigDecimal.ZERO);
-        BigDecimal total = ((BigDecimal) map.get("totalCgst"))
-                .add((BigDecimal) map.get("totalSgst"))
-                .add((BigDecimal) map.get("totalIgst"));
-        map.put("totalGst", total);
+        BigDecimal cgst = toBigDecimal(result != null ? result[0] : null);
+        BigDecimal sgst = toBigDecimal(result != null ? result[1] : null);
+        BigDecimal igst = toBigDecimal(result != null ? result[2] : null);
+        map.put("totalCgst", cgst);
+        map.put("totalSgst", sgst);
+        map.put("totalIgst", igst);
+        map.put("totalGst", cgst.add(sgst).add(igst));
         return map;
     }
 
     public List<Map<String, Object>> getPaymentModeBreakdown(LocalDate fromDate, LocalDate toDate) {
-        List<Object[]> results = expenseRepository.paymentModeBreakdown(fromDate, toDate);
+        List<Object[]> results = (fromDate != null && toDate != null)
+                ? expenseRepository.paymentModeBreakdownByRange(fromDate, toDate)
+                : expenseRepository.paymentModeBreakdownAll();
         List<Map<String, Object>> list = new ArrayList<>();
         for (Object[] row : results) {
             Map<String, Object> map = new HashMap<>();
             map.put("paymentMode", row[0]);
-            map.put("totalAmount", row[1]);
+            map.put("totalAmount", toBigDecimal(row[1]));
             list.add(map);
         }
         return list;
+    }
+
+    private static BigDecimal toBigDecimal(Object value) {
+        if (value == null) return BigDecimal.ZERO;
+        if (value instanceof BigDecimal) return (BigDecimal) value;
+        if (value instanceof Number) return BigDecimal.valueOf(((Number) value).doubleValue());
+        try {
+            return new BigDecimal(value.toString());
+        } catch (NumberFormatException e) {
+            return BigDecimal.ZERO;
+        }
     }
 
     // ─── Helpers ──────────────────────────────────────────────────────────────────
