@@ -37075,3 +37075,661 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 2026-03-15 12:48:14 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-03-15 12:48:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-03-15 12:48:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-15 12:48:23 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - Starting SjmtApplication using Java 25.0.2 with PID 37160 (C:\Users\aadhi\Downloads\sjmt\sjmt_backend-goutham\sjmt_backend-goutham\sjmt_backend-main\target\classes started by aadhi in C:\Users\aadhi\Downloads\sjmt\sjmt_backend-goutham\sjmt_backend-goutham\sjmt_backend-main)
+2026-03-15 12:48:23 [restartedMain] DEBUG com.sjmt.SJMT.SjmtApplication - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-03-15 12:48:23 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-15 12:48:23 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-15 12:48:23 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-15 12:48:25 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-15 12:48:25 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 199 ms. Found 17 JPA repository interfaces.
+2026-03-15 12:48:26 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 3000 (http)
+2026-03-15 12:48:26 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-15 12:48:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-15 12:48:26 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2842 ms
+2026-03-15 12:48:26 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-15 12:48:26 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-03-15 12:48:27 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-15 12:48:27 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-15 12:48:28 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2fe7f995
+2026-03-15 12:48:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-15 12:48:28 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-15 12:48:28 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://72.62.75.169:5432/springboot_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.13
+	Default catalog/schema: springboot_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-15 12:48:30 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-15 12:48:30 [restartedMain] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 20)
+2026-03-15 12:48:31 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15 12:48:31 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-15 12:48:32 [restartedMain] DEBUG c.s.S.S.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-15 12:48:32 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-15 12:48:32 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-15 12:48:35 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-15 12:48:35 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-15 12:48:36 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-03-15 12:48:36 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 3000 (http) with context path '/'
+2026-03-15 12:48:36 [restartedMain] INFO  com.sjmt.SJMT.SjmtApplication - Started SjmtApplication in 13.453 seconds (process running for 14.369)
+2026-03-15 12:51:31 [http-nio-3000-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-15 12:51:31 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-15 12:51:31 [http-nio-3000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-03-15 12:51:31 [http-nio-3000-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/gst-input-credit?fromDate=2026-01-01&toDate=2026-03-15
+2026-03-15 12:51:31 [http-nio-3000-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/monthly-summary?year=2026&month=3
+2026-03-15 12:51:31 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/payment-mode-breakdown?fromDate=2026-03-01&toDate=2026-03-15
+2026-03-15 12:51:31 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/date-range?fromDate=2026-03-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:32 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:32 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:32 [http-nio-3000-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:32 [http-nio-3000-exec-2] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:32 [http-nio-3000-exec-1] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:32 [http-nio-3000-exec-4] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:32 [http-nio-3000-exec-3] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:32 [http-nio-3000-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/monthly-summary?year=2026&month=3
+2026-03-15 12:51:32 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/date-range?fromDate=2026-03-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/payment-mode-breakdown?fromDate=2026-03-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/gst-input-credit?fromDate=2026-01-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        coalesce(sum(ee1_0.cgst_amount), 0),
+        coalesce(sum(ee1_0.sgst_amount), 0),
+        coalesce(sum(ee1_0.igst_amount), 0) 
+    from
+        expenses ee1_0 
+    where
+        ee1_0.status='ACTIVE' 
+        and ee1_0.is_gst_applicable=true 
+        and ee1_0.expense_date between ? and ?
+2026-03-15 12:51:32 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ee1_0.payment_mode,
+        sum(ee1_0.total_amount) 
+    from
+        expenses ee1_0 
+    where
+        ee1_0.status='ACTIVE' 
+        and ee1_0.expense_date between ? and ? 
+    group by
+        ee1_0.payment_mode
+2026-03-15 12:51:32 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ec1_0.name,
+        sum(ee1_0.total_amount) 
+    from
+        expenses ee1_0 
+    join
+        expense_categories ec1_0 
+            on ec1_0.category_id=ee1_0.category_id 
+    where
+        ee1_0.status='ACTIVE' 
+        and ee1_0.expense_date between ? and ? 
+    group by
+        ec1_0.name
+2026-03-15 12:51:32 [http-nio-3000-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ec1_0.name,
+        sum(ee1_0.total_amount) 
+    from
+        expenses ee1_0 
+    join
+        expense_categories ec1_0 
+            on ec1_0.category_id=ee1_0.category_id 
+    where
+        ee1_0.status='ACTIVE' 
+        and extract(year from ee1_0.expense_date)=? 
+        and extract(month from ee1_0.expense_date)=? 
+    group by
+        ec1_0.name
+2026-03-15 12:51:32 [http-nio-3000-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/monthly-summary?year=2026&month=3
+2026-03-15 12:51:32 [http-nio-3000-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/date-range?fromDate=2026-03-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:32 [http-nio-3000-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:32 [http-nio-3000-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/payment-mode-breakdown?fromDate=2026-03-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/gst-input-credit?fromDate=2026-01-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:32 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:32 [http-nio-3000-exec-5] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:32 [http-nio-3000-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/date-range?fromDate=2026-03-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-6] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:32 [http-nio-3000-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ec1_0.name,
+        sum(ee1_0.total_amount) 
+    from
+        expenses ee1_0 
+    join
+        expense_categories ec1_0 
+            on ec1_0.category_id=ee1_0.category_id 
+    where
+        ee1_0.status='ACTIVE' 
+        and ee1_0.expense_date between ? and ? 
+    group by
+        ec1_0.name
+2026-03-15 12:51:32 [http-nio-3000-exec-3] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:32 [http-nio-3000-exec-7] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:32 [http-nio-3000-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/monthly-summary?year=2026&month=3
+2026-03-15 12:51:32 [http-nio-3000-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/payment-mode-breakdown?fromDate=2026-03-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/gst-input-credit?fromDate=2026-01-01&toDate=2026-03-15
+2026-03-15 12:51:32 [http-nio-3000-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ec1_0.name,
+        sum(ee1_0.total_amount) 
+    from
+        expenses ee1_0 
+    join
+        expense_categories ec1_0 
+            on ec1_0.category_id=ee1_0.category_id 
+    where
+        ee1_0.status='ACTIVE' 
+        and extract(year from ee1_0.expense_date)=? 
+        and extract(month from ee1_0.expense_date)=? 
+    group by
+        ec1_0.name
+2026-03-15 12:51:32 [http-nio-3000-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ee1_0.payment_mode,
+        sum(ee1_0.total_amount) 
+    from
+        expenses ee1_0 
+    where
+        ee1_0.status='ACTIVE' 
+        and ee1_0.expense_date between ? and ? 
+    group by
+        ee1_0.payment_mode
+2026-03-15 12:51:32 [http-nio-3000-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        coalesce(sum(ee1_0.cgst_amount), 0),
+        coalesce(sum(ee1_0.sgst_amount), 0),
+        coalesce(sum(ee1_0.igst_amount), 0) 
+    from
+        expenses ee1_0 
+    where
+        ee1_0.status='ACTIVE' 
+        and ee1_0.is_gst_applicable=true 
+        and ee1_0.expense_date between ? and ?
+2026-03-15 12:51:44 [http-nio-3000-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/expenses/reports/monthly-summary?year=2026&month=2
+2026-03-15 12:51:44 [http-nio-3000-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/monthly-summary?year=2026&month=2
+2026-03-15 12:51:44 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:44 [http-nio-3000-exec-9] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:44 [http-nio-3000-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/monthly-summary?year=2026&month=2
+2026-03-15 12:51:44 [http-nio-3000-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ec1_0.name,
+        sum(ee1_0.total_amount) 
+    from
+        expenses ee1_0 
+    join
+        expense_categories ec1_0 
+            on ec1_0.category_id=ee1_0.category_id 
+    where
+        ee1_0.status='ACTIVE' 
+        and extract(year from ee1_0.expense_date)=? 
+        and extract(month from ee1_0.expense_date)=? 
+    group by
+        ec1_0.name
+2026-03-15 12:51:48 [http-nio-3000-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/expenses/reports/monthly-summary?year=2026&month=2
+2026-03-15 12:51:48 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:48 [http-nio-3000-exec-10] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:48 [http-nio-3000-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/expenses/reports/monthly-summary?year=2026&month=2
+2026-03-15 12:51:48 [http-nio-3000-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ec1_0.name,
+        sum(ee1_0.total_amount) 
+    from
+        expenses ee1_0 
+    join
+        expense_categories ec1_0 
+            on ec1_0.category_id=ee1_0.category_id 
+    where
+        ee1_0.status='ACTIVE' 
+        and extract(year from ee1_0.expense_date)=? 
+        and extract(month from ee1_0.expense_date)=? 
+    group by
+        ec1_0.name
+2026-03-15 12:51:52 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/customer-bills?page=0&size=500
+2026-03-15 12:51:52 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:51:52 [http-nio-3000-exec-2] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:51:52 [http-nio-3000-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/customer-bills?page=0&size=500
+2026-03-15 12:51:52 [http-nio-3000-exec-2] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.getAllBills(int,int,com.sjmt.SJMT.Entity.BillStatus,java.lang.Integer); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-15 12:51:52 [http-nio-3000-exec-2] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.CustomerBillController.getAllBills(int,int,com.sjmt.SJMT.Entity.BillStatus,java.lang.Integer); target is of class [com.sjmt.SJMT.Controller.CustomerBillController]
+2026-03-15 12:51:53 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        cbe1_0.id,
+        cbe1_0.balance_amount,
+        cbe1_0.bill_date,
+        cbe1_0.bill_number,
+        cbe1_0.created_at,
+        cbe1_0.created_by,
+        cbe1_0.customer_id,
+        cbe1_0.customer_snapshot,
+        cbe1_0.due_date,
+        cbe1_0.is_interstate,
+        cbe1_0.notes,
+        cbe1_0.paid_amount,
+        cbe1_0.payment_mode,
+        cbe1_0.payment_reference,
+        cbe1_0.quotation_id,
+        cbe1_0.status,
+        cbe1_0.stock_deducted,
+        cbe1_0.subtotal,
+        cbe1_0.terms,
+        cbe1_0.total_amount,
+        cbe1_0.total_cgst,
+        cbe1_0.total_discount,
+        cbe1_0.total_igst,
+        cbe1_0.total_sgst,
+        cbe1_0.updated_at 
+    from
+        customer_bills cbe1_0 
+    order by
+        cbe1_0.created_at desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-03-15 12:51:53 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-15 12:51:53 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.bill_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        customer_bill_items i1_0 
+    where
+        i1_0.bill_id=?
+2026-03-15 12:51:53 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.bill_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        customer_bill_items i1_0 
+    where
+        i1_0.bill_id=?
+2026-03-15 12:51:53 [http-nio-3000-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.bill_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        customer_bill_items i1_0 
+    where
+        i1_0.bill_id=?
+2026-03-15 12:51:53 [http-nio-3000-exec-2] WARN  o.s.d.w.c.SpringDataJackson3Configuration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-03-15 12:52:13 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/quotations?page=0&size=500
+2026-03-15 12:52:13 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.user_id,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.full_name,
+        ue1_0.last_login,
+        ue1_0.password,
+        ue1_0.phone_number,
+        ue1_0.privileges,
+        ue1_0.role,
+        ue1_0.status,
+        ue1_0.temporary_password,
+        ue1_0.updated_at,
+        ue1_0.username 
+    from
+        users ue1_0 
+    where
+        ue1_0.username=? 
+        or ue1_0.email=?
+2026-03-15 12:52:13 [http-nio-3000-exec-4] DEBUG c.s.S.S.JwtAuthenticationFilter - Set authentication for user: admin
+2026-03-15 12:52:13 [http-nio-3000-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/quotations?page=0&size=500
+2026-03-15 12:52:13 [http-nio-3000-exec-4] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.getAllQuotations(int,int,com.sjmt.SJMT.Entity.QuotationStatus,java.lang.Integer); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-15 12:52:13 [http-nio-3000-exec-4] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.sjmt.SJMT.Controller.QuotationController.getAllQuotations(int,int,com.sjmt.SJMT.Entity.QuotationStatus,java.lang.Integer); target is of class [com.sjmt.SJMT.Controller.QuotationController]
+2026-03-15 12:52:13 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        qe1_0.id,
+        qe1_0.created_at,
+        qe1_0.created_by,
+        qe1_0.customer_id,
+        qe1_0.customer_snapshot,
+        qe1_0.is_interstate,
+        qe1_0.notes,
+        qe1_0.quotation_date,
+        qe1_0.quotation_number,
+        qe1_0.status,
+        qe1_0.subtotal,
+        qe1_0.terms,
+        qe1_0.total_amount,
+        qe1_0.total_cgst,
+        qe1_0.total_discount,
+        qe1_0.total_igst,
+        qe1_0.total_sgst,
+        qe1_0.updated_at,
+        qe1_0.valid_until 
+    from
+        quotations qe1_0 
+    order by
+        qe1_0.created_at desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2026-03-15 12:52:13 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ce1_0.customer_id,
+        ce1_0.address,
+        ce1_0.city,
+        ce1_0.created_at,
+        ce1_0.customer_email,
+        ce1_0.customer_name,
+        ce1_0.gst_number,
+        ce1_0.phone_number,
+        ce1_0.pincode,
+        ce1_0.state,
+        ce1_0.status,
+        ce1_0.updated_at 
+    from
+        customers ce1_0 
+    where
+        ce1_0.customer_id=?
+2026-03-15 12:52:13 [http-nio-3000-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        i1_0.quotation_id,
+        i1_0.id,
+        i1_0.cgst_amount,
+        i1_0.description,
+        i1_0.discount_amount,
+        i1_0.discount_pct,
+        i1_0.gst_pct,
+        i1_0.hsn_code,
+        i1_0.igst_amount,
+        i1_0.line_total,
+        i1_0.product_master_id,
+        i1_0.quantity,
+        i1_0.sgst_amount,
+        i1_0.unit,
+        i1_0.unit_price 
+    from
+        quotation_items i1_0 
+    where
+        i1_0.quotation_id=?
